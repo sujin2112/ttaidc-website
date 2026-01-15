@@ -292,11 +292,13 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 1000;
             opacity: 0;
+            pointer-events: none;
             transition: opacity 0.3s ease;
         }
         
         .mobile-menu-overlay.active {
             opacity: 1;
+            pointer-events: auto;
         }
         
         .page-header {
@@ -488,6 +490,15 @@
             .contact-info {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+            
+            footer {
+                padding-bottom: 5rem;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 1rem;
             }
         }
         

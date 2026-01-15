@@ -210,9 +210,10 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 1000;
             opacity: 0;
+            pointer-events: none;
             transition: opacity 0.3s ease;
         }
-        .mobile-menu-overlay.active { opacity: 1; }
+        .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
         .page-header { padding: 10rem 0 5rem; position: relative; }
         .page-header::before {
@@ -395,6 +396,8 @@
             }
             .scroll-to-top svg { width: 20px; height: 20px; }
             .scroll-to-top span { font-size: 0.75rem; }
+            footer { padding-bottom: 5rem; }
+            .footer-links { flex-wrap: wrap; gap: 1rem; }
         }
         html { scroll-behavior: smooth; }
         ::-webkit-scrollbar { width: 10px; }
