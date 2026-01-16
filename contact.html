@@ -11,9 +11,9 @@
     <meta property="og:title" content="Contact Us - Truth Technology">
     <meta property="og:description" content="AI 데이터센터 인프라 프로젝트 문의.">
     <title>Contact Us - Truth Technology</title>
-    <link rel="canonical" href="https://ttaidc.com/contact.html">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="canonical" href="https://www.ttaidc.com/contact.html">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -577,6 +577,12 @@
     
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-theme-top">
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환">
+                <span class="theme-icon icon-sun">☀</span>
+                <span class="theme-icon icon-moon">☾</span>
+            </button>
+        </div>
         <ul>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="business.html">BUSINESS</a></li>
@@ -584,15 +590,12 @@
             <li><a href="partners.html">PARTNERS</a></li>
             <li><a href="contact.html" class="active">CONTACT US</a></li>
         </ul>
-        <div class="mobile-menu-bottom">
+        <div class="mobile-lang-flow">
             <div class="lang-options">
+                <span class="lang-icon">🌐</span>
                 <button class="lang-option-btn active" id="mobileLangKo" onclick="switchLanguage('ko')">한국어</button>
                 <button class="lang-option-btn" id="mobileLangEn" onclick="switchLanguage('en')">EN</button>
             </div>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환">
-                <span class="theme-icon icon-sun">☀</span>
-                <span class="theme-icon icon-moon">☾</span>
-            </button>
         </div>
     </div>
 

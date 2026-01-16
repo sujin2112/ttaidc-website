@@ -174,27 +174,40 @@
     }
 }
 
-/* Mobile Menu Bottom Controls (Option A) */
-.mobile-menu-bottom {
+/* Mobile Menu Bottom Controls */
+.mobile-theme-top {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 2rem;
     right: 0;
-    padding: 1.5rem 2rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    background: inherit;
+    z-index: 1003;
 }
 
-.mobile-menu-bottom .lang-options {
+.mobile-theme-top .theme-toggle {
+    display: flex;
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.mobile-lang-flow .lang-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Option C: Flow Layout Language Buttons */
+.mobile-lang-flow {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-lang-flow .lang-options {
     display: flex;
     gap: 0.5rem;
 }
 
-.mobile-menu-bottom .lang-option-btn {
+.mobile-lang-flow .lang-option-btn {
     padding: 0.5rem 1rem;
     border: 1px solid var(--border);
     background: transparent;
@@ -206,20 +219,15 @@
     transition: all 0.3s ease;
 }
 
-.mobile-menu-bottom .lang-option-btn:hover {
+.mobile-lang-flow .lang-option-btn:hover {
     border-color: var(--accent);
     color: var(--accent);
 }
 
-.mobile-menu-bottom .lang-option-btn.active {
+.mobile-lang-flow .lang-option-btn.active {
     background: var(--accent);
     border-color: var(--accent);
     color: var(--primary);
-}
-
-.mobile-menu-bottom .theme-toggle {
-    display: flex;
-    margin-right: 0;
 }
 
 /* Light Mode - Page Titles */
