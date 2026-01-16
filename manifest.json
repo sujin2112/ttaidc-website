@@ -1,0 +1,17 @@
+{
+  "name": "TTai DC",
+  "short_name": "TTai",
+  "description": "Trust Technology - AI Data Center Infrastructure",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0E27",
+  "theme_color": "#00D9FF",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

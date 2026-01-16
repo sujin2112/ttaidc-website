@@ -3,18 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TT(Truth Technology)는 NVIDIA HGX 기반 AI 데이터센터 인프라를 제공합니다. 한국과 베트남을 중심으로 GPU 서버 조달부터 구축, 운영까지 지원합니다.">
+    <meta name="keywords" content="AI 데이터센터, NVIDIA HGX, GPU 서버, AI 인프라, 데이터센터 구축, Truth Technology, TT, 베트남 AI">
+    <meta name="author" content="Truth Technology">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ttaidc.com/">
+    <meta property="og:title" content="Truth Technology - AI Data Center Infrastructure">
+    <meta property="og:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
+    <meta property="og:image" content="https://ttaidc.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Truth Technology - AI Data Center Infrastructure">
+    <meta name="twitter:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
+    
     <title>Truth Technology - AI Data Center Infrastructure</title>
+    <link rel="canonical" href="https://ttaidc.com/">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="js/theme.js"></script>
     <style>
         :root {
-            --primary: #0A0E27;
-            --secondary: #1A1F3A;
+            --primary: #1E2444;
+            --secondary: #2A3358;
             --accent: #00D9FF;
-            --text: #E8E8E8;
-            --text-dim: #A0A0A0;
-            --border: #2A2F4A;
+            --text: #FFFFFF;
+            --text-dim: #C8CDE0;
+            --border: #4A5280;
+        }
+        
+        /* Light Mode (warm cream/beige) */
+        [data-theme="light"] {
+            --primary: #F0EDE8;
+            --secondary: #FAFAF8;
+            --accent: #0077AA;
+            --text: #2A3358;
+            --text-dim: #5A6080;
+            --border: #C8C4BC;
+        }
+        
+        [data-theme="light"] .page-loader {
+            background: var(--primary);
+        }
+        
+        [data-theme="light"] nav {
+            background: rgba(240, 237, 232, 0.95);
+        }
+        
+        [data-theme="light"] .scroll-to-top {
+            background: #FFFFFF;
+            border-color: var(--accent);
+        }
+        
+        [data-theme="light"] .scroll-to-top:hover {
+            background: var(--accent);
+            color: #FFFFFF;
         }
         
         * {
@@ -29,7 +80,6 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-	        filter: brightness(1.9);
         }
         
         nav {
@@ -74,7 +124,7 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 2.5rem;
+            gap: 1.5rem;
         }
         
         /* Hamburger Menu */
@@ -239,6 +289,74 @@
         
         .nav-links a:hover {
             color: var(--accent);
+        }
+        
+        /* Modern Theme Toggle Switch */
+        .theme-toggle {
+            position: relative;
+            width: 52px;
+            height: 28px;
+            background: var(--border);
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-right: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--accent);
+        }
+        
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 22px;
+            height: 22px;
+            background: var(--text);
+            border-radius: 50%;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        [data-theme="light"] .theme-toggle::before {
+            transform: translateX(24px);
+            background: var(--primary);
+        }
+        
+        .theme-toggle .theme-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .theme-toggle .icon-moon {
+            right: 6px;
+            opacity: 1;
+        }
+        
+        .theme-toggle .icon-sun {
+            left: 6px;
+            opacity: 0.4;
+        }
+        
+        [data-theme="light"] .theme-toggle .icon-moon {
+            opacity: 0.4;
+        }
+        
+        [data-theme="light"] .theme-toggle .icon-sun {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .theme-toggle {
+                display: flex;
+            }
         }
         
         .language-selector {
@@ -680,9 +798,70 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
+        
+        /* Page Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loader-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .loader-logo span {
+            color: var(--text);
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        
+        .loader-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">TT<span>ai</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+    
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">TT<span class="ai-small">ai</span></a>
@@ -703,6 +882,11 @@
                     </div>
                 </div>
                 
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="테마 전환">
+                    <span class="theme-icon icon-sun">☀</span>
+                    <span class="theme-icon icon-moon">☾</span>
+                </button>
+                
                 <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
                     <span></span>
                     <span></span>
@@ -722,12 +906,15 @@
             <li><a href="contact.html">CONTACT US</a></li>
         </ul>
         
-        <div class="mobile-lang-section">
-            <span class="lang-icon">🌐</span>
+        <div class="mobile-menu-bottom">
             <div class="lang-options">
                 <button class="lang-option-btn active" id="mobileLangKo" onclick="switchLanguage('ko')">한국어</button>
                 <button class="lang-option-btn" id="mobileLangEn" onclick="switchLanguage('en')">EN</button>
             </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환">
+                <span class="theme-icon icon-sun">☀</span>
+                <span class="theme-icon icon-moon">☾</span>
+            </button>
         </div>
     </div>
 
@@ -817,7 +1004,7 @@
         </div>
     </footer>
 
-    <button id="scrollToTop" class="scroll-to-top">
+    <button id="scrollToTop" class="scroll-to-top" aria-label="페이지 상단으로 이동">
         <svg viewBox="0 0 24 24" width="24" height="24">
             <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
@@ -876,6 +1063,23 @@ window.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('preferredTheme', newTheme);
+        }
+        
+        // Load saved theme
+        (function() {
+            const savedTheme = localStorage.getItem('preferredTheme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+        
         function toggleLanguageDropdown() {
             const dropdown = document.getElementById('languageDropdown');
             dropdown.classList.toggle('active');
@@ -975,6 +1179,16 @@ window.addEventListener('DOMContentLoaded', () => {
                     toggleMobileMenu();
                 }
             });
+        });
+        
+        // Hide page loader when page is loaded
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                }, 300);
+            }
         });
     </script>
 </body>

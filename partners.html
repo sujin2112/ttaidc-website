@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TT의 글로벌 기술 파트너. 다우데이타, D'Live, 서울대 기술지주회사 등과 함께 AI 인프라를 구축합니다.">
+    <meta name="keywords" content="TT 파트너, 기술 파트너십, 다우데이타, D'Live, 서울대 기술지주, BNK 투자증권">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ttaidc.com/partners.html">
+    <meta property="og:title" content="Partners - Truth Technology">
+    <meta property="og:description" content="TT의 글로벌 기술 파트너와 함께하는 AI 인프라 구축.">
     <title>Partners - Truth Technology</title>
+    <link rel="canonical" href="https://ttaidc.com/partners.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="js/theme.js"></script>
     <style>
-        :root {
-            --primary: #0A0E27;
-            --secondary: #1A1F3A;
-            --accent: #00D9FF;
-            --text: #E8E8E8;
-            --text-dim: #A0A0A0;
-            --border: #2A2F4A;
-        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'IBM Plex Sans', -apple-system, sans-serif;
@@ -23,7 +28,6 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-	        filter: brightness(1.9);
         }
         nav {
             position: fixed;
@@ -120,7 +124,7 @@
             color: var(--accent);
             font-weight: 600;
         }
-        .nav-right { display: flex; align-items: center; gap: 2.5rem; }
+        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -236,6 +240,8 @@
             max-width: 800px;
             line-height: 1.8;
         }
+        
+        /* Partners Grid */
         .partners-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -365,16 +371,17 @@
         ::-webkit-scrollbar-track { background: var(--primary); }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-
-	.partner-logo img,
-	.partner-card img,
-	.partners-grid img {
-   	 filter: brightness(0.526);
-	}
-
     </style>
 </head>
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">TT<span>ai</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+    
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">TT<span class="ai-small">ai</span></a>
@@ -393,6 +400,10 @@
                         <div class="language-option" onclick="switchLanguage('en')">English</div>
                     </div>
                 </div>
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="테마 전환">
+                    <span class="theme-icon icon-sun">☀</span>
+                    <span class="theme-icon icon-moon">☾</span>
+                </button>
                 <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
                     <span></span>
                     <span></span>
@@ -411,12 +422,15 @@
             <li><a href="partners.html" class="active">PARTNERS</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
         </ul>
-        <div class="mobile-lang-section">
-            <span class="lang-icon">🌐</span>
+        <div class="mobile-menu-bottom">
             <div class="lang-options">
                 <button class="lang-option-btn active" id="mobileLangKo" onclick="switchLanguage('ko')">한국어</button>
                 <button class="lang-option-btn" id="mobileLangEn" onclick="switchLanguage('en')">EN</button>
             </div>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="테마 전환">
+                <span class="theme-icon icon-sun">☀</span>
+                <span class="theme-icon icon-moon">☾</span>
+            </button>
         </div>
     </div>
 
@@ -424,31 +438,27 @@
         <div class="container">
             <div class="partners-header">
                 <h1 class="partners-title">PARTNERS</h1>
-                <p class="partners-subtitle" data-ko="글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>최고의 <strong style='color: #FFFFFF; font-weight: 700;'>신뢰성(Trust)</strong>과 <strong style='color: #FFFFFF; font-weight: 700;'>기술력(Technology)</strong>을 제공합니다" data-en="Together with global technology partners and regional collaborators,<br>we provide the highest <strong style='color: #FFFFFF; font-weight: 700;'>Trust</strong> and <strong style='color: #FFFFFF; font-weight: 700;'>Technology</strong> in AI data center infrastructure construction">
+                <p class="partners-subtitle" data-ko="글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>최고의 <strong class='highlight'>신뢰성(Trust)</strong>과 <strong class='highlight'>기술력(Technology)</strong>을 제공합니다" data-en="Together with global technology partners and regional collaborators,<br>we provide the highest <strong class='highlight'>Trust</strong> and <strong class='highlight'>Technology</strong> in AI data center infrastructure construction">
                     글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>
-                    최고의 <strong style="color: #FFFFFF; font-weight: 700;">신뢰성(Trust)</strong>과 <strong style="color: #FFFFFF; font-weight: 700;">기술력(Technology)</strong>을 제공합니다
+                    최고의 <strong class="highlight">신뢰성(Trust)</strong>과 <strong class="highlight">기술력(Technology)</strong>을 제공합니다
                 </p>
             </div>
 
             <div class="partners-grid">
                 <div class="partner-card">
-                    <img src="daou-logo.png" alt="다우데이타" class="partner-logo">
+                    <img src="daou-logo.png" alt="다우데이타" class="partner-logo" loading="lazy">
                 </div>
-
                 <div class="partner-card">
-                    <img src="dlive-logo.png" alt="D'Live" class="partner-logo">
+                    <img src="dlive-logo.png" alt="D'Live" class="partner-logo" loading="lazy">
                 </div>
-
                 <div class="partner-card">
-                    <img src="snu-logo.png" alt="서울대 기술지주회사" class="partner-logo">
+                    <img src="snu-logo.png" alt="서울대 기술지주회사" class="partner-logo" loading="lazy">
                 </div>
-
                 <div class="partner-card">
-                    <img src="ssi-logo.png" alt="SSI Solutions" class="partner-logo" style="object-position: center;">
+                    <img src="ssi-logo.png" alt="SSI Solutions" class="partner-logo" loading="lazy">
                 </div>
-
                 <div class="partner-card">
-                    <img src="bnk-logo.png" alt="BNK 투자증권" class="partner-logo">
+                    <img src="bnk-logo.png" alt="BNK 투자증권" class="partner-logo" loading="lazy">
                 </div>
             </div>
         </div>
@@ -467,7 +477,7 @@
         </div>
     </footer>
 
-    <button id="scrollToTop" class="scroll-to-top">
+    <button id="scrollToTop" class="scroll-to-top" aria-label="페이지 상단으로 이동">
         <svg viewBox="0 0 24 24" width="24" height="24">
             <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         </svg>
