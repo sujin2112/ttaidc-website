@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TT의 핵심 사업 영역. NVIDIA HGX 기반 GPU 서버, AI 데이터센터 구축, 아시아 시장 프로젝트 관리 서비스를 제공합니다.">
-    <meta name="keywords" content="NVIDIA HGX 서버, AI 데이터센터 구축, GPU 서버 공급, HPC 인프라, LLM 학습 환경">
+    <meta name="description" content="TT의 글로벌 기술 파트너. 다우데이타, D'Live, 서울대 기술지주회사 등과 함께 AI 인프라를 구축합니다.">
+    <meta name="keywords" content="TT 파트너, 기술 파트너십, 다우데이타, D'Live, 서울대 기술지주, BNK 투자증권">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ttaidc.com/business.html">
-    <meta property="og:title" content="Business - Truth Technology">
-    <meta property="og:description" content="NVIDIA HGX 기반 GPU 서버, AI 데이터센터 구축 서비스.">
-    <title>Business - Truth Technology</title>
-    <link rel="canonical" href="https://www.ttaidc.com/business.html">
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    <link rel="manifest" href="./manifest.json">
+    <meta property="og:url" content="https://www.ttaidc.com/partners/">
+    <meta property="og:title" content="Partners - Truth Technology">
+    <meta property="og:description" content="TT의 글로벌 기술 파트너와 함께하는 AI 인프라 구축.">
+    <title>Partners - Truth Technology</title>
+    <link rel="canonical" href="https://www.ttaidc.com/partners/">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/theme.css">
-    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -219,19 +219,13 @@
             transition: opacity 0.3s ease;
         }
         .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .page-header { padding: 10rem 0 5rem; position: relative; }
-        .page-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 400px;
-            background: radial-gradient(ellipse at center, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
-            opacity: 0.4;
+        .partners-section {
+            min-height: 100vh;
+            padding: 10rem 2rem 6rem;
         }
-        .page-title {
+        .container { max-width: 1400px; margin: 0 auto; }
+        .partners-header { margin-bottom: 5rem; }
+        .partners-title {
             font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 700;
             margin-bottom: 2rem;
@@ -240,77 +234,63 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .content-section { padding: 0 0 8rem; }
-        .service-item {
-            background: var(--secondary);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 4rem;
-            margin-bottom: 3rem;
+        .partners-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--text-dim);
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        
+        /* Partners Grid */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .partner-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            transition: all 0.4s ease;
+            cursor: pointer;
             position: relative;
             overflow: hidden;
-            transition: all 0.4s ease;
         }
-        .service-item::before {
+        .partner-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--accent);
-            transform: scaleY(0);
-            transition: transform 0.4s ease;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
-        .service-item:hover {
-            border-color: var(--accent);
-            transform: translateX(8px);
+        .partner-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 25px 60px rgba(0, 217, 255, 0.25);
         }
-        .service-item:hover::before { transform: scaleY(1); }
-        .service-number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 3rem;
-            font-weight: 700;
-            color: rgba(0, 217, 255, 0.15);
-            position: absolute;
-            top: 2rem;
-            right: 3rem;
-        }
-        .service-title {
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
+        .partner-card:hover::before { opacity: 1; }
+        .partner-logo {
+            max-width: 85%;
+            max-height: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            transition: all 0.4s ease;
             position: relative;
+            z-index: 1;
+            display: block;
+            margin: auto;
         }
-        .service-subtitle {
-            font-size: 1.15rem;
-            color: var(--text);
-            font-weight: 500;
-            margin-bottom: 2rem;
-        }
-        .service-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .service-detail {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-        .service-detail::before {
-            content: '▸';
-            color: var(--accent);
-            font-size: 1.2rem;
-            flex-shrink: 0;
-            margin-top: 0.2rem;
-        }
-        .service-detail p {
-            color: var(--text-dim);
-            line-height: 1.7;
-            font-size: 1.05rem;
-        }
+        .partner-card:hover .partner-logo { transform: scale(1.1); }
         footer {
             padding: 3rem 2rem;
             text-align: center;
@@ -370,9 +350,11 @@
             .hamburger { display: flex; }
             .mobile-menu, .mobile-menu-overlay { display: block; }
             .language-selector { display: none; }
-            .page-header { padding: 8rem 2rem 4rem; }
-            .service-item { padding: 3rem 2rem; }
-            .service-number { font-size: 2rem; top: 1.5rem; right: 2rem; }
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
+            }
+            .partner-card { padding: 2rem 1.5rem; min-height: 160px; }
             .scroll-to-top {
                 width: 60px;
                 height: 60px;
@@ -402,14 +384,14 @@
     
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">TT<span class="ai-small">ai</span></a>
+            <a href="../" class="logo">TT<span class="ai-small">ai</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="business.html" class="active">BUSINESS</a></li>
-                    <li><a href="company.html">COMPANY</a></li>
-                    <li><a href="partners.html">PARTNERS</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="../about/">ABOUT US</a></li>
+                    <li><a href="../business/">BUSINESS</a></li>
+                    <li><a href="../company/">COMPANY</a></li>
+                    <li><a href="./" class="active">PARTNERS</a></li>
+                    <li><a href="../contact/">CONTACT US</a></li>
                 </ul>
                 <div class="language-selector">
                     <button class="language-btn" onclick="toggleLanguageDropdown()">🌐</button>
@@ -440,11 +422,11 @@
             </button>
         </div>
         <ul>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="business.html" class="active">BUSINESS</a></li>
-            <li><a href="company.html">COMPANY</a></li>
-            <li><a href="partners.html">PARTNERS</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="../about/">ABOUT US</a></li>
+            <li><a href="../business/">BUSINESS</a></li>
+            <li><a href="../company/">COMPANY</a></li>
+            <li><a href="./" class="active">PARTNERS</a></li>
+            <li><a href="../contact/">CONTACT US</a></li>
         </ul>
         <div class="mobile-lang-flow">
             <div class="lang-options">
@@ -455,62 +437,31 @@
         </div>
     </div>
 
-    <section class="page-header">
+    <section class="partners-section">
         <div class="container">
-            <h1 class="page-title">BUSINESS</h1>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <div class="container">
-            <div class="service-item">
-                <div class="service-number">01</div>
-                <h2 class="service-title">NVIDIA GPU Server & AI Infrastructure</h2>
-                <p class="service-subtitle" data-ko="NVIDIA HGX 기반 고성능 AI 인프라 구축" data-en="NVIDIA HGX-based High-Performance AI Infrastructure Construction">NVIDIA HGX 기반 고성능 AI 인프라 구축</p>
-                <div class="service-details">
-                    <div class="service-detail">
-                        <p data-ko="NVIDIA HGX 기반 GPU 서버 공급" data-en="Supply of NVIDIA HGX-based GPU servers">NVIDIA HGX 기반 GPU 서버 공급</p>
-                    </div>
-                    <div class="service-detail">
-                        <p data-ko="AI / HPC / LLM 학습 및 추론 환경 구축" data-en="Construction of AI / HPC / LLM training and inference environments">AI / HPC / LLM 학습 및 추론 환경 구축</p>
-                    </div>
-                    <div class="service-detail">
-                        <p data-ko="고성능 네트워크 및 시스템 아키텍처 설계" data-en="High-performance network and system architecture design">고성능 네트워크 및 시스템 아키텍처 설계</p>
-                    </div>
-                </div>
+            <div class="partners-header">
+                <h1 class="partners-title">PARTNERS</h1>
+                <p class="partners-subtitle" data-ko="글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>최고의 <strong class='highlight'>신뢰성(Trust)</strong>과 <strong class='highlight'>기술력(Technology)</strong>을 제공합니다" data-en="Together with global technology partners and regional collaborators,<br>we provide the highest <strong class='highlight'>Trust</strong> and <strong class='highlight'>Technology</strong> in AI data center infrastructure construction">
+                    글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>
+                    최고의 <strong class="highlight">신뢰성(Trust)</strong>과 <strong class="highlight">기술력(Technology)</strong>을 제공합니다
+                </p>
             </div>
 
-            <div class="service-item">
-                <div class="service-number">02</div>
-                <h2 class="service-title">AI Data Center (AIDC) Development</h2>
-                <p class="service-subtitle" data-ko="차세대 AI 데이터센터 기획 및 구축" data-en="Planning and Construction of Next-Generation AI Data Centers">차세대 AI 데이터센터 기획 및 구축</p>
-                <div class="service-details">
-                    <div class="service-detail">
-                        <p data-ko="AI 데이터센터 기획 및 구조 설계" data-en="AI data center planning and structural design">AI 데이터센터 기획 및 구조 설계</p>
-                    </div>
-                    <div class="service-detail">
-                        <p data-ko="전력·냉각·공간 효율을 고려한 인프라 컨설팅" data-en="Infrastructure consulting considering power, cooling, and space efficiency">전력·냉각·공간 효율을 고려한 인프라 컨설팅</p>
-                    </div>
-                    <div class="service-detail">
-                        <p data-ko="데이터센터 구축 프로젝트 협업 및 조율" data-en="Data center construction project collaboration and coordination">데이터센터 구축 프로젝트 협업 및 조율</p>
-                    </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <img src="../images/daou-logo.webp" alt="다우데이타" class="partner-logo" loading="lazy">
                 </div>
-            </div>
-
-            <div class="service-item">
-                <div class="service-number">03</div>
-                <h2 class="service-title">Project Coordination & Market Development</h2>
-                <p class="service-subtitle" data-ko="아시아 시장 AI 프로젝트 발굴 및 실행 관리" data-en="Asian Market AI Project Development and Execution Management">아시아 시장 AI 프로젝트 발굴 및 실행 관리</p>
-                <div class="service-details">
-                    <div class="service-detail">
-                        <p data-ko="베트남 및 아시아 지역 AI 프로젝트 발굴" data-en="AI project development in Vietnam and Asia region">베트남 및 아시아 지역 AI 프로젝트 발굴</p>
-                    </div>
-                    <div class="service-detail">
-                        <p data-ko="현지 파트너 및 투자자와의 사업 연결" data-en="Business connections with local partners and investors">현지 파트너 및 투자자와의 사업 연결</p>
-                    </div>
-                    <div class="service-detail">
-                        <p data-ko="기술·상업·운영 관점의 통합 프로젝트 관리" data-en="Integrated project management from technical, commercial, and operational perspectives">기술·상업·운영 관점의 통합 프로젝트 관리</p>
-                    </div>
+                <div class="partner-card">
+                    <img src="../images/dlive-logo.webp" alt="D'Live" class="partner-logo" loading="lazy">
+                </div>
+                <div class="partner-card">
+                    <img src="../images/snu-logo.webp" alt="서울대 기술지주회사" class="partner-logo" loading="lazy">
+                </div>
+                <div class="partner-card">
+                    <img src="../images/ssi-logo.webp" alt="SSI Solutions" class="partner-logo" loading="lazy">
+                </div>
+                <div class="partner-card">
+                    <img src="../images/bnk-logo.webp" alt="BNK 투자증권" class="partner-logo" loading="lazy">
                 </div>
             </div>
         </div>
@@ -520,11 +471,11 @@
         <div class="container">
             <p>&copy; 2026 Trust & Technology. All rights reserved.</p>
             <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="business.html">Business</a>
-                <a href="company.html">Company</a>
-                <a href="partners.html">Partners</a>
-                <a href="contact.html">Contact</a>
+                <a href="../about/">About</a>
+                <a href="../business/">Business</a>
+                <a href="../company/">Company</a>
+                <a href="./">Partners</a>
+                <a href="../contact/">Contact</a>
             </div>
         </div>
     </footer>

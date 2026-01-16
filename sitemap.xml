@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.ttaidc.com/</loc>
-    <lastmod>2026-01-16</lastmod>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.ttaidc.com/about.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.ttaidc.com/about/</loc>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ttaidc.com/business.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.ttaidc.com/business/</loc>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ttaidc.com/company.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.ttaidc.com/company/</loc>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ttaidc.com/partners.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.ttaidc.com/partners/</loc>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ttaidc.com/contact.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://www.ttaidc.com/contact/</loc>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

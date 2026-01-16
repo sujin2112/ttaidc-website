@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TT의 글로벌 기술 파트너. 다우데이타, D'Live, 서울대 기술지주회사 등과 함께 AI 인프라를 구축합니다.">
-    <meta name="keywords" content="TT 파트너, 기술 파트너십, 다우데이타, D'Live, 서울대 기술지주, BNK 투자증권">
+    <meta name="description" content="주식회사 TT 회사 소개. NVIDIA GPU 기반 AI 데이터센터 전문 한국 법인입니다.">
+    <meta name="keywords" content="TT 회사, Truth Technology, AI 인프라 기업, 한국 법인, GPU 서버 전문">
     <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ttaidc.com/partners.html">
-    <meta property="og:title" content="Partners - Truth Technology">
-    <meta property="og:description" content="TT의 글로벌 기술 파트너와 함께하는 AI 인프라 구축.">
-    <title>Partners - Truth Technology</title>
-    <link rel="canonical" href="https://www.ttaidc.com/partners.html">
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    <link rel="manifest" href="./manifest.json">
+    <meta property="og:url" content="https://www.ttaidc.com/company/">
+    <meta property="og:title" content="Company - Truth Technology">
+    <meta property="og:description" content="주식회사 TT. NVIDIA GPU 기반 AI 데이터센터 전문 기업.">
+    <title>Company - Truth Technology</title>
+    <link rel="canonical" href="https://www.ttaidc.com/company/">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="manifest" href="../manifest.json">
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/theme.css">
-    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="../css/theme.css">
+    <script src="../js/theme.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -219,13 +219,19 @@
             transition: opacity 0.3s ease;
         }
         .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
-        .partners-section {
-            min-height: 100vh;
-            padding: 10rem 2rem 6rem;
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .page-header { padding: 10rem 0 5rem; position: relative; }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            background: radial-gradient(ellipse at center, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
+            opacity: 0.4;
         }
-        .container { max-width: 1400px; margin: 0 auto; }
-        .partners-header { margin-bottom: 5rem; }
-        .partners-title {
+        .page-title {
             font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 700;
             margin-bottom: 2rem;
@@ -234,63 +240,96 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .partners-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: var(--text-dim);
-            max-width: 800px;
-            line-height: 1.8;
-        }
-        
-        /* Partners Grid */
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        .partner-card {
-            background: white;
-            border-radius: 20px;
-            padding: 3rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            transition: all 0.4s ease;
-            cursor: pointer;
+        .content-section { padding: 0 0 8rem; }
+        .intro-text {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 4rem;
+            margin-bottom: 4rem;
             position: relative;
             overflow: hidden;
         }
-        .partner-card::before {
+        .intro-text::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+        }
+        .intro-text p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: var(--text-dim);
+            line-height: 2;
+            margin-bottom: 1.8rem;
+        }
+        .intro-text p:last-child { margin-bottom: 0; }
+        .intro-text strong { color: var(--text); font-weight: 600; }
+        .highlight-section {
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 217, 255, 0.02) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 24px;
+            padding: 3.5rem;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .highlight-section p {
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            color: var(--text);
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        .highlight-section strong { color: var(--accent); font-weight: 600; }
+        .key-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .value-card {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, transparent 100%);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
-        .partner-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 25px 60px rgba(0, 217, 255, 0.25);
+        .value-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
         }
-        .partner-card:hover::before { opacity: 1; }
-        .partner-logo {
-            max-width: 85%;
-            max-height: 120px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            object-position: center;
-            transition: all 0.4s ease;
-            position: relative;
-            z-index: 1;
+        .value-card:hover::before { opacity: 1; }
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             display: block;
-            margin: auto;
         }
-        .partner-card:hover .partner-logo { transform: scale(1.1); }
+        .value-card h3 {
+            color: var(--accent);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        .value-card p {
+            color: var(--text-dim);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
         footer {
             padding: 3rem 2rem;
             text-align: center;
@@ -350,11 +389,10 @@
             .hamburger { display: flex; }
             .mobile-menu, .mobile-menu-overlay { display: block; }
             .language-selector { display: none; }
-            .partners-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1.5rem;
-            }
-            .partner-card { padding: 2rem 1.5rem; min-height: 160px; }
+            .page-header { padding: 8rem 2rem 4rem; }
+            .intro-text { padding: 2.5rem 2rem; }
+            .highlight-section { padding: 2.5rem 2rem; }
+            .key-values { grid-template-columns: 1fr; }
             .scroll-to-top {
                 width: 60px;
                 height: 60px;
@@ -384,14 +422,14 @@
     
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">TT<span class="ai-small">ai</span></a>
+            <a href="../" class="logo">TT<span class="ai-small">ai</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="business.html">BUSINESS</a></li>
-                    <li><a href="company.html">COMPANY</a></li>
-                    <li><a href="partners.html" class="active">PARTNERS</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="../about/">ABOUT US</a></li>
+                    <li><a href="../business/">BUSINESS</a></li>
+                    <li><a href="./" class="active">COMPANY</a></li>
+                    <li><a href="../partners/">PARTNERS</a></li>
+                    <li><a href="../contact/">CONTACT US</a></li>
                 </ul>
                 <div class="language-selector">
                     <button class="language-btn" onclick="toggleLanguageDropdown()">🌐</button>
@@ -422,11 +460,11 @@
             </button>
         </div>
         <ul>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="business.html">BUSINESS</a></li>
-            <li><a href="company.html">COMPANY</a></li>
-            <li><a href="partners.html" class="active">PARTNERS</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="../about/">ABOUT US</a></li>
+            <li><a href="../business/">BUSINESS</a></li>
+            <li><a href="./" class="active">COMPANY</a></li>
+            <li><a href="../partners/">PARTNERS</a></li>
+            <li><a href="../contact/">CONTACT US</a></li>
         </ul>
         <div class="mobile-lang-flow">
             <div class="lang-options">
@@ -437,31 +475,43 @@
         </div>
     </div>
 
-    <section class="partners-section">
+    <section class="page-header">
         <div class="container">
-            <div class="partners-header">
-                <h1 class="partners-title">PARTNERS</h1>
-                <p class="partners-subtitle" data-ko="글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>최고의 <strong class='highlight'>신뢰성(Trust)</strong>과 <strong class='highlight'>기술력(Technology)</strong>을 제공합니다" data-en="Together with global technology partners and regional collaborators,<br>we provide the highest <strong class='highlight'>Trust</strong> and <strong class='highlight'>Technology</strong> in AI data center infrastructure construction">
-                    글로벌 기술 파트너 및 지역 협력사와 함께 AI 데이터센터 인프라 구축에 있어<br>
-                    최고의 <strong class="highlight">신뢰성(Trust)</strong>과 <strong class="highlight">기술력(Technology)</strong>을 제공합니다
-                </p>
+            <h1 class="page-title">COMPANY</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="intro-text">
+                <p data-ko="<strong>주식회사 TT</strong>는 NVIDIA GPU 기반 AI 데이터센터(AIDC) 및 고성능 컴퓨팅 인프라를 전문으로 하는 한국 법인 기업입니다." data-en="<strong>TT Co., Ltd.</strong> is a Korean corporate entity specializing in NVIDIA GPU-based AI Data Centers (AIDC) and high-performance computing infrastructure."><strong>주식회사 TT</strong>는 NVIDIA GPU 기반 AI 데이터센터(AIDC) 및 고성능 컴퓨팅 인프라를 전문으로 하는 한국 법인 기업입니다.</p>
+                
+                <p data-ko="TT는 <strong>NVIDIA HGX 기반 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다." data-en="TT supports the planning and execution of high-performance AI infrastructure projects including <strong>NVIDIA HGX-based GPU servers</strong> and related system architectures, with business operations centered in Korea and Vietnam.">TT는 <strong>NVIDIA HGX 기반 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다.</p>
+                
+                <p data-ko="TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다." data-en="TT collaborates with global technology partners and key local stakeholders within clear authority boundaries and compliance frameworks, aiming for <strong>stable and transparent project execution</strong>.">TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다.</p>
             </div>
 
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <img src="daou-logo.png" alt="다우데이타" class="partner-logo" loading="lazy">
+            <div class="highlight-section">
+                <p data-ko="TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다" data-en="TT supports the successful completion of AI infrastructure projects<br>based on <strong>technical expertise</strong> and <strong>business execution capabilities</strong>">TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다</p>
+            </div>
+
+            <div class="key-values">
+                <div class="value-card">
+                    <span class="value-icon">🎯</span>
+                    <h3 data-ko="전문성" data-en="Expertise">전문성</h3>
+                    <p data-ko="NVIDIA HGX 기반 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험" data-en="Deep technical understanding and practical experience in NVIDIA HGX-based GPU servers and AI data center infrastructure">NVIDIA HGX 기반 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험</p>
                 </div>
-                <div class="partner-card">
-                    <img src="dlive-logo.png" alt="D'Live" class="partner-logo" loading="lazy">
+
+                <div class="value-card">
+                    <span class="value-icon">🤝</span>
+                    <h3 data-ko="파트너십" data-en="Partnership">파트너십</h3>
+                    <p data-ko="글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축" data-en="Building close collaborative relationships with global technology partners and key local stakeholders">글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축</p>
                 </div>
-                <div class="partner-card">
-                    <img src="snu-logo.png" alt="서울대 기술지주회사" class="partner-logo" loading="lazy">
-                </div>
-                <div class="partner-card">
-                    <img src="ssi-logo.png" alt="SSI Solutions" class="partner-logo" loading="lazy">
-                </div>
-                <div class="partner-card">
-                    <img src="bnk-logo.png" alt="BNK 투자증권" class="partner-logo" loading="lazy">
+
+                <div class="value-card">
+                    <span class="value-icon">📋</span>
+                    <h3 data-ko="투명성" data-en="Transparency">투명성</h3>
+                    <p data-ko="명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영" data-en="Stable and transparent project operations within clear authority boundaries and compliance frameworks">명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영</p>
                 </div>
             </div>
         </div>
@@ -471,11 +521,11 @@
         <div class="container">
             <p>&copy; 2026 Trust & Technology. All rights reserved.</p>
             <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="business.html">Business</a>
-                <a href="company.html">Company</a>
-                <a href="partners.html">Partners</a>
-                <a href="contact.html">Contact</a>
+                <a href="../about/">About</a>
+                <a href="../business/">Business</a>
+                <a href="./">Company</a>
+                <a href="../partners/">Partners</a>
+                <a href="../contact/">Contact</a>
             </div>
         </div>
     </footer>

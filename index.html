@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://www.ttaidc.com/">
     <meta property="og:title" content="Truth Technology - AI Data Center Infrastructure">
     <meta property="og:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
-    <meta property="og:image" content="https://www.ttaidc.com/og-image.jpg">
+    <meta property="og:image" content="https://www.ttaidc.com/og-image.png">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -24,9 +24,29 @@
     <link rel="canonical" href="https://www.ttaidc.com/">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
     <link rel="manifest" href="./manifest.json">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Truth Technology",
+      "url": "https://www.ttaidc.com",
+      "logo": "https://www.ttaidc.com/favicon.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+82-31-713-8893",
+        "contactType": "sales",
+        "email": "info@ttaidc.com"
+      },
+      "sameAs": [
+        "https://www.ttaidc.com"
+      ]
+    }
+    </script>
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="css/theme.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css">
     <script src="js/theme.js"></script>
@@ -864,14 +884,14 @@
     
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">TT<span class="ai-small">ai</span></a>
+            <a href="./" class="logo">TT<span class="ai-small">ai</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="about.html">ABOUT US</a></li>
-                    <li><a href="business.html">BUSINESS</a></li>
-                    <li><a href="company.html">COMPANY</a></li>
-                    <li><a href="partners.html">PARTNERS</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="about/">ABOUT US</a></li>
+                    <li><a href="business/">BUSINESS</a></li>
+                    <li><a href="company/">COMPANY</a></li>
+                    <li><a href="partners/">PARTNERS</a></li>
+                    <li><a href="contact/">CONTACT US</a></li>
                 </ul>
                 
                 <div class="language-selector">
@@ -886,7 +906,6 @@
                     <span class="theme-icon icon-sun">☀</span>
                     <span class="theme-icon icon-moon">☾</span>
                 </button>
-                
                 <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
                     <span></span>
                     <span></span>
@@ -906,11 +925,11 @@
         </div>
         
         <ul>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li><a href="business.html">BUSINESS</a></li>
-            <li><a href="company.html">COMPANY</a></li>
-            <li><a href="partners.html">PARTNERS</a></li>
-            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="about/">ABOUT US</a></li>
+            <li><a href="business/">BUSINESS</a></li>
+            <li><a href="company/">COMPANY</a></li>
+            <li><a href="partners/">PARTNERS</a></li>
+            <li><a href="contact/">CONTACT US</a></li>
         </ul>
         
         <div class="mobile-lang-flow">
@@ -924,7 +943,7 @@
 
     <section class="hero-slider">
         <div class="slide active">
-            <div class="slide-bg" style="background-image: url('Section1.jpg');"></div>
+            <div class="slide-bg" style="background-image: url('images/Section1.webp');"></div>
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <h1 class="slide-title">INFRASTRUCTURE</h1>
@@ -933,7 +952,7 @@
         </div>
 
         <div class="slide">
-            <div class="slide-bg" style="background-image: url('Section2.jpg');"></div>
+            <div class="slide-bg" style="background-image: url('images/Section2.webp');"></div>
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <h1 class="slide-title">DEPLOYMENT</h1>
@@ -942,7 +961,7 @@
         </div>
 
         <div class="slide">
-            <div class="slide-bg" style="background-image: url('Section3.jpg');"></div>
+            <div class="slide-bg" style="background-image: url('images/Section3.webp');"></div>
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <h1 class="slide-title">EXECUTABILITY</h1>

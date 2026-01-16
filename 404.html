@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
+    <title>Page Not Found - Truth Technology</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00D9FF">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.css">
+    <script src="/js/theme.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        main { flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
+        
+        /* Reuse Nav Styles from theme.css */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        [data-theme="light"] nav { background: rgba(240, 237, 232, 0.95); }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+            text-decoration: none;
+        }
+        .logo span { color: var(--text); font-weight: 400; }
+        .logo .ai-small { font-size: 1.0rem !important; vertical-align: baseline; }
+        
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+        
+        /* 404 Specific Styles */
+        .error-container {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 80px; /* Accounts for fixed nav */
+        }
+        
+        .error-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(6rem, 15vw, 10rem);
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(0, 217, 255, 0.2);
+        }
+        
+        .error-title {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .error-message {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-home {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .btn-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+        }
+        
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">TT<span class="ai-small">ai</span></a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="/about/">ABOUT US</a></li>
+                    <li><a href="/business/">BUSINESS</a></li>
+                    <li><a href="/company/">COMPANY</a></li>
+                    <li><a href="/partners/">PARTNERS</a></li>
+                    <li><a href="/contact/">CONTACT US</a></li>
+                </ul>
+                
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="테마 전환">
+                    <span class="theme-icon icon-sun">☀</span>
+                    <span class="theme-icon icon-moon">☾</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="error-container">
+            <h1 class="error-code">404</h1>
+            <div class="error-title">Page Not Found</div>
+            <p class="error-message">
+                죄송합니다. 요청하신 페이지를 찾을 수 없습니다.<br>
+                주소가 잘못 입력되었거나, 삭제된 페이지일 수 있습니다.
+            </p>
+            <a href="/" class="btn-home">GO HOME</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Truth Technology. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
