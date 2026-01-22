@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TT(Trust Technology)는 NVIDIA HGX 기반 AI 데이터센터 인프라를 제공합니다. 한국과 베트남을 중심으로 GPU 서버 조달부터 구축, 운영까지 지원합니다.">
+    <meta name="description"
+        content="TT(Trust Technology)는 NVIDIA HGX 기반 AI 데이터센터 인프라를 제공합니다. 한국과 베트남을 중심으로 GPU 서버 조달부터 구축, 운영까지 지원합니다.">
     <meta name="keywords" content="AI 데이터센터, NVIDIA HGX, GPU 서버, AI 인프라, 데이터센터 구축, Trust Technology, TT, 베트남 AI">
     <meta name="author" content="Trust Technology">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.ttaidc.com/">
     <meta property="og:title" content="Trust Technology - AI Data Center Infrastructure">
     <meta property="og:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
     <meta property="og:image" content="https://www.ttaidc.com/og-image.png">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Trust Technology - AI Data Center Infrastructure">
     <meta name="twitter:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
-    
+
     <title>Trust Technology - AI Data Center Infrastructure</title>
     <link rel="canonical" href="https://www.ttaidc.com/">
     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -46,8 +48,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="css/theme.css" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        as="style">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/theme.css">
     <script src="js/theme.js"></script>
     <style>
@@ -59,7 +65,7 @@
             --text-dim: #C8CDE0;
             --border: #4A5280;
         }
-        
+
         /* Light Mode (warm cream/beige) */
         [data-theme="light"] {
             --primary: #F0EDE8;
@@ -69,31 +75,31 @@
             --text-dim: #5A6080;
             --border: #C8C4BC;
         }
-        
+
         [data-theme="light"] .page-loader {
             background: var(--primary);
         }
-        
+
         [data-theme="light"] nav {
             background: rgba(240, 237, 232, 0.95);
         }
-        
+
         [data-theme="light"] .scroll-to-top {
             background: #FFFFFF;
             border-color: var(--accent);
         }
-        
+
         [data-theme="light"] .scroll-to-top:hover {
             background: var(--accent);
             color: #FFFFFF;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'IBM Plex Sans', -apple-system, sans-serif;
             background: var(--primary);
@@ -101,7 +107,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         nav {
             position: fixed;
             top: 0;
@@ -112,7 +118,7 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
         }
-        
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -121,7 +127,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
@@ -130,23 +136,23 @@
             letter-spacing: -0.02em;
             text-decoration: none;
         }
-        
+
         .logo span {
             color: var(--text);
             font-weight: 400;
         }
-        
+
         .logo .ai-small {
             font-size: 1.0rem !important;
             vertical-align: baseline;
         }
-        
+
         .nav-right {
             display: flex;
             align-items: center;
             gap: 1.5rem;
         }
-        
+
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -161,7 +167,7 @@
             padding: 0.5rem;
             z-index: 1002;
         }
-        
+
         .hamburger span {
             display: block;
             width: 24px;
@@ -171,19 +177,19 @@
             transition: all 0.3s ease;
             border-radius: 2px;
         }
-        
+
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
-        
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
-        
+
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(6px, -6px);
         }
-        
+
         /* Mobile Menu */
         .mobile-menu {
             display: none;
@@ -199,21 +205,21 @@
             transition: right 0.3s ease;
             border-left: 1px solid var(--border);
         }
-        
+
         .mobile-menu.active {
             right: 0;
         }
-        
+
         .mobile-menu ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .mobile-menu li {
             margin-bottom: 0.5rem;
         }
-        
+
         .mobile-menu a {
             display: block;
             padding: 1rem;
@@ -224,13 +230,13 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .mobile-menu a:hover,
         .mobile-menu a.active {
             color: var(--accent);
             background: rgba(0, 217, 255, 0.1);
         }
-        
+
         /* Mobile Language Section */
         .mobile-lang-section {
             margin-top: 2rem;
@@ -241,16 +247,16 @@
             justify-content: center;
             gap: 1rem;
         }
-        
+
         .mobile-lang-section .lang-icon {
             font-size: 1.5rem;
         }
-        
+
         .mobile-lang-section .lang-options {
             display: flex;
             gap: 0.5rem;
         }
-        
+
         .mobile-lang-section .lang-option-btn {
             padding: 0.5rem 1rem;
             border: 1px solid var(--border);
@@ -262,18 +268,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .mobile-lang-section .lang-option-btn:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
-        
+
         .mobile-lang-section .lang-option-btn.active {
             background: var(--accent);
             border-color: var(--accent);
             color: var(--primary);
         }
-        
+
         .mobile-menu-overlay {
             display: none;
             position: fixed;
@@ -287,18 +293,18 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
-        
+
         .mobile-menu-overlay.active {
             opacity: 1;
             pointer-events: auto;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-        
+
         .nav-links a {
             color: var(--text-dim);
             text-decoration: none;
@@ -306,11 +312,11 @@
             font-weight: 500;
             transition: color 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent);
         }
-        
+
         /* Modern Theme Toggle Switch */
         .theme-toggle {
             position: relative;
@@ -324,11 +330,11 @@
             margin-right: 1rem;
             transition: background 0.3s ease;
         }
-        
+
         .theme-toggle:hover {
             background: var(--accent);
         }
-        
+
         .theme-toggle::before {
             content: '';
             position: absolute;
@@ -341,12 +347,12 @@
             transition: transform 0.3s ease, background 0.3s ease;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-        
+
         [data-theme="light"] .theme-toggle::before {
             transform: translateX(24px);
             background: var(--primary);
         }
-        
+
         .theme-toggle .theme-icon {
             position: absolute;
             top: 50%;
@@ -354,35 +360,35 @@
             font-size: 0.8rem;
             transition: opacity 0.3s ease;
         }
-        
+
         .theme-toggle .icon-moon {
             right: 6px;
             opacity: 1;
         }
-        
+
         .theme-toggle .icon-sun {
             left: 6px;
             opacity: 0.4;
         }
-        
+
         [data-theme="light"] .theme-toggle .icon-moon {
             opacity: 0.4;
         }
-        
+
         [data-theme="light"] .theme-toggle .icon-sun {
             opacity: 1;
         }
-        
+
         @media (max-width: 768px) {
             .theme-toggle {
                 display: flex;
             }
         }
-        
+
         .language-selector {
             position: relative;
         }
-        
+
         .language-btn {
             background: none;
             border: none;
@@ -392,11 +398,11 @@
             padding: 0.5rem;
             transition: transform 0.3s ease;
         }
-        
+
         .language-btn:hover {
             transform: scale(1.1);
         }
-        
+
         .language-dropdown {
             position: absolute;
             top: 100%;
@@ -413,13 +419,13 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        
+
         .language-dropdown.active {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-        
+
         .language-option {
             padding: 0.7rem 1rem;
             cursor: pointer;
@@ -428,24 +434,24 @@
             color: var(--text);
             font-size: 0.95rem;
         }
-        
+
         .language-option:hover {
             background: rgba(0, 217, 255, 0.1);
         }
-        
+
         .language-option.active {
             background: rgba(0, 217, 255, 0.15);
             color: var(--accent);
             font-weight: 600;
         }
-        
+
         .hero-slider {
             position: relative;
             width: 100%;
             height: 100vh;
             overflow: hidden;
         }
-        
+
         .slide {
             position: absolute;
             top: 0;
@@ -455,11 +461,11 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        
+
         .slide.active {
             opacity: 1;
         }
-        
+
         .slide-bg {
             position: absolute;
             top: 0;
@@ -470,16 +476,21 @@
             background-position: center;
             animation: zoomIn 10s ease-out forwards;
         }
-        
+
         @keyframes zoomIn {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.08); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.08);
+            }
         }
-        
+
         .slide.active .slide-bg {
             animation: zoomIn 10s ease-out forwards;
         }
-        
+
         .slide-overlay {
             position: absolute;
             top: 0;
@@ -488,7 +499,7 @@
             bottom: 0;
             background: linear-gradient(to right, rgba(10, 14, 39, 0.8) 0%, rgba(10, 14, 39, 0.4) 100%);
         }
-        
+
         .slide-content {
             position: relative;
             height: 100%;
@@ -501,7 +512,7 @@
             padding: 0 4rem;
             z-index: 2;
         }
-        
+
         .slide-title {
             font-size: clamp(2.5rem, 6vw, 5.5rem);
             font-weight: 700;
@@ -510,7 +521,7 @@
             line-height: 1.1;
             animation: slideInUp 0.8s ease-out 0.3s both;
         }
-        
+
         .slide-description {
             font-size: clamp(1rem, 2vw, 1.4rem);
             color: rgba(255, 255, 255, 0.85);
@@ -518,18 +529,19 @@
             line-height: 1.7;
             animation: slideInUp 0.8s ease-out 0.5s both;
         }
-        
+
         @keyframes slideInUp {
             from {
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .slider-controls {
             position: absolute;
             bottom: 3rem;
@@ -541,7 +553,7 @@
             align-items: center;
             gap: 2rem;
         }
-        
+
         .slider-arrow {
             width: 50px;
             height: 50px;
@@ -555,25 +567,25 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
-        
+
         .slider-arrow:hover {
             background: rgba(0, 217, 255, 0.2);
             border-color: var(--accent);
             transform: scale(1.1);
         }
-        
+
         .slider-arrow svg {
             width: 22px;
             height: 22px;
             fill: white;
         }
-        
+
         .slider-dots {
             display: flex;
             gap: 0.8rem;
             align-items: center;
         }
-        
+
         .dot {
             width: 10px;
             height: 10px;
@@ -584,17 +596,17 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .dot.active {
             background: white;
             width: 35px;
             border-radius: 5px;
         }
-        
+
         .dot:hover:not(.active) {
             background: rgba(255, 255, 255, 0.6);
         }
-        
+
         .progress-bar {
             position: absolute;
             bottom: 0;
@@ -603,31 +615,36 @@
             background: var(--accent);
             width: 0%;
         }
-        
+
         .dot.active .progress-bar {
             animation: progress 5s linear forwards;
         }
-        
+
         @keyframes progress {
-            0% { width: 0%; }
-            100% { width: 100%; }
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+
         section {
             padding: 8rem 0;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 5rem;
         }
-        
+
         .section-label {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
@@ -636,19 +653,19 @@
             letter-spacing: 0.15em;
             margin-bottom: 1rem;
         }
-        
+
         .section-title {
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
             color: var(--text);
         }
-        
+
         .business-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-        
+
         .business-card {
             background: var(--secondary);
             border: 1px solid var(--border);
@@ -656,13 +673,13 @@
             padding: 2.5rem;
             transition: all 0.4s ease;
         }
-        
+
         .business-card:hover {
             transform: translateY(-8px);
             border-color: var(--accent);
             box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
         }
-        
+
         .card-icon {
             width: 60px;
             height: 60px;
@@ -674,25 +691,25 @@
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .business-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--text);
         }
-        
+
         .business-card p {
             color: var(--text-dim);
             line-height: 1.7;
         }
-        
+
         footer {
             padding: 3rem 2rem;
             text-align: center;
             border-top: 1px solid var(--border);
             color: var(--text-dim);
         }
-        
+
         .scroll-to-top {
             position: fixed;
             bottom: 2rem;
@@ -715,110 +732,110 @@
             z-index: 999;
             box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
         }
-        
+
         .scroll-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .scroll-to-top:hover {
             background: var(--accent);
             color: #0A0E27;
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 217, 255, 0.5);
         }
-        
+
         .scroll-to-top svg {
             width: 28px;
             height: 28px;
         }
-        
+
         .scroll-to-top span {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             font-weight: 600;
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .hamburger {
                 display: flex;
             }
-            
+
             .mobile-menu,
             .mobile-menu-overlay {
                 display: block;
             }
-            
+
             .language-selector {
                 display: none;
             }
-            
+
             .slide-content {
                 padding: 0 2rem;
             }
-            
+
             .slider-controls {
                 bottom: 2rem;
                 gap: 1rem;
             }
-            
+
             .slider-arrow {
                 width: 42px;
                 height: 42px;
             }
-            
+
             .scroll-to-top {
                 width: 60px;
                 height: 60px;
                 bottom: 1.5rem;
                 right: 1.5rem;
             }
-            
+
             .scroll-to-top svg {
                 width: 20px;
                 height: 20px;
             }
-            
+
             .scroll-to-top span {
                 font-size: 0.75rem;
             }
-            
+
             footer {
                 padding-bottom: 5rem;
             }
-            
+
             .footer-links {
                 flex-wrap: wrap;
                 gap: 1rem;
             }
         }
-        
+
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-        
+
         ::-webkit-scrollbar {
             width: 10px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: var(--primary);
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: var(--border);
             border-radius: 5px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
-        
+
         /* Page Loading Animation */
         .page-loader {
             position: fixed;
@@ -833,12 +850,12 @@
             z-index: 9999;
             transition: opacity 0.5s ease, visibility 0.5s ease;
         }
-        
+
         .page-loader.hidden {
             opacity: 0;
             visibility: hidden;
         }
-        
+
         .loader-spinner {
             width: 50px;
             height: 50px;
@@ -847,7 +864,7 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-        
+
         .loader-logo {
             font-family: 'JetBrains Mono', monospace;
             font-size: 2rem;
@@ -855,24 +872,27 @@
             color: var(--accent);
             margin-bottom: 1rem;
         }
-        
+
         .loader-logo span {
             color: var(--text);
             font-weight: 400;
             font-size: 1.2rem;
         }
-        
+
         .loader-content {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
@@ -881,7 +901,7 @@
             <div class="loader-spinner"></div>
         </div>
     </div>
-    
+
     <nav>
         <div class="nav-container">
             <a href="./" class="logo">TT<span class="ai-small">ai</span></a>
@@ -893,7 +913,7 @@
                     <li><a href="partners/">PARTNERS</a></li>
                     <li><a href="contact/">CONTACT US</a></li>
                 </ul>
-                
+
                 <div class="language-selector">
                     <button class="language-btn" onclick="toggleLanguageDropdown()">🌐</button>
                     <div class="language-dropdown" id="languageDropdown">
@@ -901,7 +921,7 @@
                         <div class="language-option" onclick="switchLanguage('en')">English</div>
                     </div>
                 </div>
-                
+
                 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="테마 전환">
                     <span class="theme-icon icon-sun">☀</span>
                     <span class="theme-icon icon-moon">☾</span>
@@ -914,7 +934,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-theme-top">
@@ -923,7 +943,7 @@
                 <span class="theme-icon icon-moon">☾</span>
             </button>
         </div>
-        
+
         <ul>
             <li><a href="about/">ABOUT US</a></li>
             <li><a href="business/">BUSINESS</a></li>
@@ -931,7 +951,7 @@
             <li><a href="partners/">PARTNERS</a></li>
             <li><a href="contact/">CONTACT US</a></li>
         </ul>
-        
+
         <div class="mobile-lang-flow">
             <div class="lang-options">
                 <span class="lang-icon">🌐</span>
@@ -947,7 +967,9 @@
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <h1 class="slide-title">INFRASTRUCTURE</h1>
-                <p class="slide-description" data-ko="엔비디아(NVIDIA)의 AI 데이터센터 인프라를 통해<br>한국과 베트남을 연결" data-en="Connecting Korea and Vietnam<br>through NVIDIA AI Data Center Infrastructure">엔비디아(NVIDIA)의 AI 데이터센터 인프라를 통해<br>한국과 베트남을 연결</p>
+                <p class="slide-description" data-ko="AI 데이터센터 인프라를 통해 한국과 베트남을 연결"
+                    data-en="Connecting Korea and Vietnam through AI Data Center Infrastructure">AI 데이터센터 인프라를
+                    통해 한국과 베트남을 연결</p>
             </div>
         </div>
 
@@ -956,7 +978,9 @@
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <h1 class="slide-title">DEPLOYMENT</h1>
-                <p class="slide-description" data-ko="GPU 조달부터 구축·운영까지<br>NVIDIA HGX-Class 아키텍처 기반의 실증된 AI 데이터센터 인프라" data-en="From GPU procurement to deployment and operations<br>Proven AI Data Center Infrastructure based on NVIDIA HGX-Class Architecture">GPU 조달부터 구축·운영까지<br>NVIDIA HGX-Class 아키텍처 기반의 실증된 AI 데이터센터 인프라</p>
+                <p class="slide-description" data-ko="GPU 조달부터 구축·운영까지<br>AI 아키텍처 기반의 실증된 데이터센터 인프라"
+                    data-en="From GPU procurement to deployment and operations<br>Proven Data Center Infrastructure based on AI Architecture">
+                    GPU 조달부터 구축·운영까지<br>AI 아키텍처 기반의 실증된 데이터센터 인프라</p>
             </div>
         </div>
 
@@ -965,13 +989,17 @@
             <div class="slide-overlay"></div>
             <div class="slide-content">
                 <h1 class="slide-title">EXECUTABILITY</h1>
-                <p class="slide-description" data-ko="조달부터 운영까지<br>TT는 실제로 구축·운영이 가능한 인프라를 제공" data-en="From procurement to operations<br>TT provides infrastructure that can actually be deployed and operated">조달부터 운영까지<br>TT는 실제로 구축·운영이 가능한 인프라를 제공</p>
+                <p class="slide-description" data-ko="조달부터 운영까지<br>TT는 실제로 구축·운영이 가능한 인프라를 제공"
+                    data-en="From procurement to operations<br>TT provides infrastructure that can actually be deployed and operated">
+                    조달부터 운영까지<br>TT는 실제로 구축·운영이 가능한 인프라를 제공</p>
             </div>
         </div>
 
         <div class="slider-controls">
             <div class="slider-arrow prev" onclick="changeSlide(-1)">
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
             </div>
 
             <div class="slider-dots">
@@ -987,7 +1015,9 @@
             </div>
 
             <div class="slider-arrow next" onclick="changeSlide(1)">
-                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                </svg>
             </div>
         </div>
     </section>
@@ -998,24 +1028,30 @@
                 <div class="section-label">What We Do</div>
                 <h2 class="section-title" data-ko="핵심 사업 영역" data-en="Core Business Areas">핵심 사업 영역</h2>
             </div>
-            
+
             <div class="business-grid">
                 <div class="business-card">
                     <div class="card-icon">🖥️</div>
-                    <h3>NVIDIA HGX Server</h3>
-                    <p data-ko="AI 모델 학습과 추론, 대규모 AI 데이터센터 확장을 위한 HGX-Class GPU 서버를 제공합니다." data-en="We provide HGX-Class GPU servers for AI model training and inference, and large-scale AI data center expansion.">AI 모델 학습과 추론, 대규모 AI 데이터센터 확장을 위한 HGX-Class GPU 서버를 제공합니다.</p>
+                    <h3>AI Server</h3>
+                    <p data-ko="AI 모델 학습과 추론, 대규모 AI 데이터센터 확장을 위한 고성능 GPU 서버를 제공합니다."
+                        data-en="We provide high-performance GPU servers for AI model training and inference, and large-scale AI data center expansion.">
+                        AI 모델 학습과 추론, 대규모 AI 데이터센터 확장을 위한 고성능 GPU 서버를 제공합니다.</p>
                 </div>
-                
+
                 <div class="business-card">
                     <div class="card-icon">🏢</div>
                     <h3>AI Data Center (AIDC)</h3>
-                    <p data-ko="TT는 인프라 설계, 구축, 운영 준비까지 포함해 실제 현장에서 실행 가능한 AI 데이터센터를 구축합니다." data-en="TT builds AI data centers that are executable in real-world environments, including infrastructure design, construction, and operational readiness.">TT는 인프라 설계, 구축, 운영 준비까지 포함해 실제 현장에서 실행 가능한 AI 데이터센터를 구축합니다.</p>
+                    <p data-ko="TT는 인프라 설계, 구축, 운영 준비까지 포함해 실제 현장에서 실행 가능한 AI 데이터센터를 구축합니다."
+                        data-en="TT builds AI data centers that are executable in real-world environments, including infrastructure design, construction, and operational readiness.">
+                        TT는 인프라 설계, 구축, 운영 준비까지 포함해 실제 현장에서 실행 가능한 AI 데이터센터를 구축합니다.</p>
                 </div>
-                
+
                 <div class="business-card">
                     <div class="card-icon">⚙️</div>
                     <h3>Deployment & Operations</h3>
-                    <p data-ko="TT는 AI 데이터센터 인프라의 구축과 운영을 관리하여, 안정적인 성능, 운영의 연속성, 그리고 장기적인 신뢰성을 보장합니다." data-en="TT manages the deployment and operations of AI data center infrastructure, ensuring stable performance, operational continuity, and long-term reliability.">TT는 AI 데이터센터 인프라의 구축과 운영을 관리하여, 안정적인 성능, 운영의 연속성, 그리고 장기적인 신뢰성을 보장합니다.</p>
+                    <p data-ko="TT는 AI 데이터센터 인프라의 구축과 운영을 관리하여, 안정적인 성능, 운영의 연속성, 그리고 장기적인 신뢰성을 보장합니다."
+                        data-en="TT manages the deployment and operations of AI data center infrastructure, ensuring stable performance, operational continuity, and long-term reliability.">
+                        TT는 AI 데이터센터 인프라의 구축과 운영을 관리하여, 안정적인 성능, 운영의 연속성, 그리고 장기적인 신뢰성을 보장합니다.</p>
                 </div>
             </div>
         </div>
@@ -1029,63 +1065,63 @@
 
     <button id="scrollToTop" class="scroll-to-top" aria-label="페이지 상단으로 이동">
         <svg viewBox="0 0 24 24" width="24" height="24">
-            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
         <span>TOP</span>
     </button>
 
-    
-<script>
-let currentLang = 'ko';
 
-function switchLanguage(lang) {
-    currentLang = lang;
-    const elements = document.querySelectorAll('[data-ko][data-en]');
-    
-    elements.forEach(element => {
-        const koText = element.getAttribute('data-ko');
-        const enText = element.getAttribute('data-en');
-        
-        if (lang === 'ko') {
-            element.innerHTML = koText;
-        } else {
-            element.innerHTML = enText;
+    <script>
+        let currentLang = 'ko';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            const elements = document.querySelectorAll('[data-ko][data-en]');
+
+            elements.forEach(element => {
+                const koText = element.getAttribute('data-ko');
+                const enText = element.getAttribute('data-en');
+
+                if (lang === 'ko') {
+                    element.innerHTML = koText;
+                } else {
+                    element.innerHTML = enText;
+                }
+            });
+
+            // Update desktop language options
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+            });
+
+            if (lang === 'ko') {
+                document.querySelectorAll('.language-option')[0].classList.add('active');
+            } else {
+                document.querySelectorAll('.language-option')[1].classList.add('active');
+            }
+
+            document.getElementById('languageDropdown').classList.remove('active');
+
+            // Update mobile language buttons
+            document.querySelectorAll('.lang-option-btn').forEach(btn => btn.classList.remove('active'));
+            if (lang === 'ko') {
+                document.getElementById('mobileLangKo')?.classList.add('active');
+            } else {
+                document.getElementById('mobileLangEn')?.classList.add('active');
+            }
+
+            localStorage.setItem('preferredLanguage', lang);
         }
-    });
-    
-    // Update desktop language options
-    document.querySelectorAll('.language-option').forEach(option => {
-        option.classList.remove('active');
-    });
-    
-    if (lang === 'ko') {
-        document.querySelectorAll('.language-option')[0].classList.add('active');
-    } else {
-        document.querySelectorAll('.language-option')[1].classList.add('active');
-    }
-    
-    document.getElementById('languageDropdown').classList.remove('active');
-    
-    // Update mobile language buttons
-    document.querySelectorAll('.lang-option-btn').forEach(btn => btn.classList.remove('active'));
-    if (lang === 'ko') {
-        document.getElementById('mobileLangKo')?.classList.add('active');
-    } else {
-        document.getElementById('mobileLangEn')?.classList.add('active');
-    }
-    
-    localStorage.setItem('preferredLanguage', lang);
-}
 
-window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang) {
-        switchLanguage(savedLang);
-    }
-});
-</script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                switchLanguage(savedLang);
+            }
+        });
+    </script>
 
-<script>
+    <script>
         // Theme Toggle
         function toggleTheme() {
             const html = document.documentElement;
@@ -1094,21 +1130,21 @@ window.addEventListener('DOMContentLoaded', () => {
             html.setAttribute('data-theme', newTheme);
             localStorage.setItem('preferredTheme', newTheme);
         }
-        
+
         // Load saved theme
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('preferredTheme');
             if (savedTheme) {
                 document.documentElement.setAttribute('data-theme', savedTheme);
             }
         })();
-        
+
         function toggleLanguageDropdown() {
             const dropdown = document.getElementById('languageDropdown');
             dropdown.classList.toggle('active');
         }
-        
-        document.addEventListener('click', function(event) {
+
+        document.addEventListener('click', function (event) {
             const selector = document.querySelector('.language-selector');
             if (!selector.contains(event.target)) {
                 document.getElementById('languageDropdown').classList.remove('active');
@@ -1179,22 +1215,22 @@ window.addEventListener('DOMContentLoaded', () => {
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
+
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        
+
         function toggleMobileMenu() {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         }
-        
+
         hamburger.addEventListener('click', toggleMobileMenu);
         mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
-        
+
         // Close mobile menu when clicking a link
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
@@ -1203,7 +1239,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-        
+
         // Hide page loader when page is loaded
         window.addEventListener('load', () => {
             const loader = document.getElementById('pageLoader');
@@ -1215,4 +1251,5 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     </script>
 </body>
+
 </html>

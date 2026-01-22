@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,9 @@
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/theme.css">
     <script src="../js/theme.js"></script>
     <style>
@@ -26,7 +29,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'IBM Plex Sans', -apple-system, sans-serif;
             background: var(--primary);
@@ -34,7 +37,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         nav {
             position: fixed;
             top: 0;
@@ -45,7 +48,7 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
         }
-        
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -54,7 +57,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
@@ -63,23 +66,23 @@
             letter-spacing: -0.02em;
             text-decoration: none;
         }
-        
+
         .logo span {
             color: var(--text);
             font-weight: 400;
         }
-        
+
         .logo .ai-small {
             font-size: 1.0rem !important;
             vertical-align: baseline;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-        
+
         .nav-links a {
             color: var(--text-dim);
             text-decoration: none;
@@ -88,12 +91,12 @@
             transition: color 0.3s ease;
             position: relative;
         }
-        
+
         .nav-links a:hover,
         .nav-links a.active {
             color: var(--accent);
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -104,16 +107,16 @@
             background: var(--accent);
             transition: width 0.3s ease;
         }
-        
+
         .nav-links a:hover::after,
         .nav-links a.active::after {
             width: 100%;
         }
-        
+
         .language-selector {
             position: relative;
         }
-        
+
         .language-btn {
             background: none;
             border: none;
@@ -123,11 +126,11 @@
             padding: 0.5rem;
             transition: transform 0.3s ease;
         }
-        
+
         .language-btn:hover {
             transform: scale(1.1);
         }
-        
+
         .language-dropdown {
             position: absolute;
             top: 100%;
@@ -144,13 +147,13 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-        
+
         .language-dropdown.active {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-        
+
         .language-option {
             padding: 0.7rem 1rem;
             cursor: pointer;
@@ -159,23 +162,23 @@
             color: var(--text);
             font-size: 0.95rem;
         }
-        
+
         .language-option:hover {
             background: rgba(0, 217, 255, 0.1);
         }
-        
+
         .language-option.active {
             background: rgba(0, 217, 255, 0.15);
             color: var(--accent);
             font-weight: 600;
         }
-        
+
         .nav-right {
             display: flex;
             align-items: center;
             gap: 1.5rem;
         }
-        
+
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -190,7 +193,7 @@
             padding: 0.5rem;
             z-index: 1002;
         }
-        
+
         .hamburger span {
             display: block;
             width: 24px;
@@ -200,19 +203,19 @@
             transition: all 0.3s ease;
             border-radius: 2px;
         }
-        
+
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
-        
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
-        
+
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(6px, -6px);
         }
-        
+
         /* Mobile Menu */
         .mobile-menu {
             display: none;
@@ -228,21 +231,21 @@
             transition: right 0.3s ease;
             border-left: 1px solid var(--border);
         }
-        
+
         .mobile-menu.active {
             right: 0;
         }
-        
+
         .mobile-menu ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .mobile-menu li {
             margin-bottom: 0.5rem;
         }
-        
+
         .mobile-menu a {
             display: block;
             padding: 1rem;
@@ -253,13 +256,13 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .mobile-menu a:hover,
         .mobile-menu a.active {
             color: var(--accent);
             background: rgba(0, 217, 255, 0.1);
         }
-        
+
         /* Mobile Language Section */
         .mobile-lang-section {
             margin-top: 2rem;
@@ -270,16 +273,16 @@
             justify-content: center;
             gap: 1rem;
         }
-        
+
         .mobile-lang-section .lang-icon {
             font-size: 1.5rem;
         }
-        
+
         .mobile-lang-section .lang-options {
             display: flex;
             gap: 0.5rem;
         }
-        
+
         .mobile-lang-section .lang-option-btn {
             padding: 0.5rem 1rem;
             border: 1px solid var(--border);
@@ -291,18 +294,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .mobile-lang-section .lang-option-btn:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
-        
+
         .mobile-lang-section .lang-option-btn.active {
             background: var(--accent);
             border-color: var(--accent);
             color: var(--primary);
         }
-        
+
         .mobile-menu-overlay {
             display: none;
             position: fixed;
@@ -316,23 +319,23 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
-        
+
         .mobile-menu-overlay.active {
             opacity: 1;
             pointer-events: auto;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+
         .page-header {
             padding: 10rem 0 5rem;
             position: relative;
         }
-        
+
         .page-header::before {
             content: '';
             position: absolute;
@@ -343,7 +346,7 @@
             background: radial-gradient(ellipse at center, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
             opacity: 0.4;
         }
-        
+
         .page-title {
             font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 700;
@@ -353,11 +356,11 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .content-section {
             padding: 0 0 8rem;
         }
-        
+
         .intro-text {
             background: var(--secondary);
             border: 1px solid var(--border);
@@ -367,7 +370,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .intro-text::before {
             content: '';
             position: absolute;
@@ -377,23 +380,23 @@
             height: 4px;
             background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
         }
-        
+
         .intro-text p {
             font-size: clamp(1.1rem, 2vw, 1.35rem);
             color: var(--text-dim);
             line-height: 2;
             margin-bottom: 1.8rem;
         }
-        
+
         .intro-text p:last-child {
             margin-bottom: 0;
         }
-        
+
         .intro-text strong {
             color: var(--text);
             font-weight: 600;
         }
-        
+
         .highlight-section {
             background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 217, 255, 0.02) 100%);
             border: 1px solid rgba(0, 217, 255, 0.2);
@@ -402,26 +405,26 @@
             text-align: center;
             margin: 4rem 0;
         }
-        
+
         .highlight-section p {
             font-size: clamp(1.3rem, 2.5vw, 1.8rem);
             color: var(--text);
             font-weight: 500;
             line-height: 1.7;
         }
-        
+
         .highlight-section strong {
             color: var(--accent);
             font-weight: 600;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 4rem;
         }
-        
+
         .feature-card {
             background: var(--secondary);
             border: 1px solid var(--border);
@@ -431,7 +434,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -443,64 +446,64 @@
             opacity: 0;
             transition: opacity 0.4s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-8px);
             border-color: var(--accent);
             box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
         }
-        
+
         .feature-card:hover::before {
             opacity: 1;
         }
-        
+
         .feature-icon {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             display: block;
         }
-        
+
         .feature-card h3 {
             color: var(--accent);
             font-size: 1.3rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
-        
+
         .feature-card p {
             color: var(--text-dim);
             line-height: 1.7;
             font-size: 1.05rem;
         }
-        
+
         footer {
             padding: 3rem 2rem;
             text-align: center;
             border-top: 1px solid var(--border);
             color: var(--text-dim);
         }
-        
+
         footer p {
             margin-bottom: 0.5rem;
         }
-        
+
         .footer-links {
             display: flex;
             gap: 2rem;
             justify-content: center;
             margin-top: 1rem;
         }
-        
+
         .footer-links a {
             color: var(--text-dim);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .footer-links a:hover {
             color: var(--accent);
         }
-        
+
         .scroll-to-top {
             position: fixed;
             bottom: 2rem;
@@ -523,114 +526,115 @@
             z-index: 999;
             box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
         }
-        
+
         .scroll-to-top.visible {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .scroll-to-top:hover {
             background: var(--accent);
             color: #0A0E27;
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 217, 255, 0.5);
         }
-        
+
         .scroll-to-top svg {
             width: 28px;
             height: 28px;
         }
-        
+
         .scroll-to-top span {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             font-weight: 600;
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .hamburger {
                 display: flex;
             }
-            
+
             .mobile-menu,
             .mobile-menu-overlay {
                 display: block;
             }
-            
+
             .language-selector {
                 display: none;
             }
-            
+
             .page-header {
                 padding: 8rem 2rem 4rem;
                 min-height: 50vh;
             }
-            
+
             .intro-text {
                 padding: 2.5rem 2rem;
             }
-            
+
             .highlight-section {
                 padding: 2.5rem 2rem;
             }
-            
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .scroll-to-top {
                 width: 60px;
                 height: 60px;
                 bottom: 1.5rem;
                 right: 1.5rem;
             }
-            
+
             .scroll-to-top svg {
                 width: 20px;
                 height: 20px;
             }
-            
+
             .scroll-to-top span {
                 font-size: 0.75rem;
             }
-            
+
             footer {
                 padding-bottom: 5rem;
             }
-            
+
             .footer-links {
                 flex-wrap: wrap;
                 gap: 1rem;
             }
         }
-        
+
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
         }
-        
+
         ::-webkit-scrollbar {
             width: 10px;
         }
-        
+
         ::-webkit-scrollbar-track {
             background: var(--primary);
         }
-        
+
         ::-webkit-scrollbar-thumb {
             background: var(--border);
             border-radius: 5px;
         }
-        
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
     </style>
 </head>
+
 <body>
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
@@ -639,7 +643,7 @@
             <div class="loader-spinner"></div>
         </div>
     </div>
-    
+
     <nav>
         <div class="nav-container">
             <a href="../" class="logo">TT<span class="ai-small">ai</span></a>
@@ -651,7 +655,7 @@
                     <li><a href="../partners/">PARTNERS</a></li>
                     <li><a href="../contact/">CONTACT US</a></li>
                 </ul>
-                
+
                 <div class="language-selector">
                     <button class="language-btn" onclick="toggleLanguageDropdown()">🌐</button>
                     <div class="language-dropdown" id="languageDropdown">
@@ -659,12 +663,12 @@
                         <div class="language-option" onclick="switchLanguage('en')">English</div>
                     </div>
                 </div>
-                
+
                 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="테마 전환">
                     <span class="theme-icon icon-sun">☀</span>
                     <span class="theme-icon icon-moon">☾</span>
                 </button>
-                
+
                 <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
                     <span></span>
                     <span></span>
@@ -673,7 +677,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-theme-top">
@@ -682,7 +686,7 @@
                 <span class="theme-icon icon-moon">☾</span>
             </button>
         </div>
-        
+
         <ul>
             <li><a href="./" class="active">ABOUT US</a></li>
             <li><a href="../business/">BUSINESS</a></li>
@@ -690,7 +694,7 @@
             <li><a href="../partners/">PARTNERS</a></li>
             <li><a href="../contact/">CONTACT US</a></li>
         </ul>
-        
+
         <div class="mobile-lang-flow">
             <div class="lang-options">
                 <span class="lang-icon">🌐</span>
@@ -709,32 +713,45 @@
     <section class="content-section">
         <div class="container">
             <div class="intro-text">
-                <p data-ko="TT는 <strong>한국과 베트남을 중심으로 아시아 시장</strong>에서 AI 데이터센터(AIDC), 고성능 GPU 서버, 클라우드·AI 인프라 구축 사업을 전개하고 있습니다." data-en="TT is expanding its business in AI Data Centers (AIDC), high-performance GPU servers, and cloud & AI infrastructure construction, <strong>focusing on the Asian market</strong> centered in Korea and Vietnam.">TT는 <strong>한국과 베트남을 중심으로 아시아 시장</strong>에서 AI 데이터센터(AIDC), 고성능 GPU 서버, 클라우드·AI 인프라 구축 사업을 전개하고 있습니다.</p>
-                
-                <p data-ko="TT는 단순한 NVIDIA 서버 공급사가 아닌, AI 비즈니스가 실제로 작동하도록 만드는 인프라 파트너를 지향합니다." data-en="TT aims to be not just an NVIDIA server supplier, but an infrastructure partner that enables AI businesses to actually operate.">TT는 단순한 NVIDIA 서버 공급사가 아닌, AI 비즈니스가 실제로 작동하도록 만드는 인프라 파트너를 지향합니다.</p>
+                <p data-ko="TT는 <strong>한국과 베트남을 중심으로 아시아 시장</strong>에서 AI 데이터센터(AIDC), 고성능 GPU 서버, 클라우드·AI 인프라 구축 사업을 전개하고 있습니다."
+                    data-en="TT is expanding its business in AI Data Centers (AIDC), high-performance GPU servers, and cloud & AI infrastructure construction, <strong>focusing on the Asian market</strong> centered in Korea and Vietnam.">
+                    TT는 <strong>한국과 베트남을 중심으로 아시아 시장</strong>에서 AI 데이터센터(AIDC), 고성능 GPU 서버, 클라우드·AI 인프라 구축 사업을 전개하고
+                    있습니다.</p>
+
+                <p data-ko="TT는 단순한 GPU 서버 공급사가 아닌, AI 비즈니스가 실제로 작동하도록 만드는 인프라 파트너를 지향합니다."
+                    data-en="TT aims to be not just an GPU server supplier, but an infrastructure partner that enables AI businesses to actually operate.">
+                    TT는 단순한 GPU 서버 공급사가 아닌, AI 비즈니스가 실제로 작동하도록 만드는 인프라 파트너를 지향합니다.</p>
             </div>
 
             <div class="highlight-section">
-                <p data-ko="TT는 <strong>검증된 기술 전문성과 실행 역량</strong>을 기반으로<br>AI 인프라 프로젝트를 안정적으로 수행하고 완수합니다." data-en="TT stably executes and completes AI infrastructure projects<br>based on <strong>proven technical expertise and execution capabilities</strong>">TT는 <strong>검증된 기술 전문성과 실행 역량</strong>을 기반으로<br>AI 인프라 프로젝트를 안정적으로 수행하고 완수합니다.</p>
+                <p data-ko="TT는 <strong>검증된 기술 전문성과 실행 역량</strong>을 기반으로<br>AI 인프라 프로젝트를 안정적으로 수행하고 완수합니다."
+                    data-en="TT stably executes and completes AI infrastructure projects<br>based on <strong>proven technical expertise and execution capabilities</strong>">
+                    TT는 <strong>검증된 기술 전문성과 실행 역량</strong>을 기반으로<br>AI 인프라 프로젝트를 안정적으로 수행하고 완수합니다.</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <span class="feature-icon">🌏</span>
                     <h3 data-ko="아시아 시장 전문성" data-en="Asian Market Expertise">아시아 시장 전문성</h3>
-                    <p data-ko="한국과 베트남을 중심으로 아시아 AI 인프라 시장에 대한 깊은 이해와 현지 네트워크를 보유하고 있습니다." data-en="Deep understanding of the AI infrastructure market in Asia centered on Korea and Vietnam, with strong local networks">한국과 베트남을 중심으로 아시아 AI 인프라 시장에 대한 깊은 이해와 현지 네트워크를 보유하고 있습니다.</p>
+                    <p data-ko="한국과 베트남을 중심으로 아시아 AI 인프라 시장에 대한 깊은 이해와 현지 네트워크를 보유하고 있습니다."
+                        data-en="Deep understanding of the AI infrastructure market in Asia centered on Korea and Vietnam, with strong local networks">
+                        한국과 베트남을 중심으로 아시아 AI 인프라 시장에 대한 깊은 이해와 현지 네트워크를 보유하고 있습니다.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="feature-icon">🤝</span>
                     <h3 data-ko="글로벌 파트너십" data-en="Global Partnership">글로벌 파트너십</h3>
-                    <p data-ko="NVIDIA HGX를 포함한 최신 AI 컴퓨팅 자원을 글로벌 파트너사와의 협력을 통해 안정적으로 공급합니다." data-en="Stable supply of latest AI computing resources including NVIDIA HGX through collaboration with global partners">NVIDIA HGX를 포함한 최신 AI 컴퓨팅 자원을 글로벌 파트너사와의 협력을 통해 안정적으로 공급합니다.</p>
+                    <p data-ko="AI 고성능 GPU 서버를 포함한 최신 AI 컴퓨팅 자원을 글로벌 파트너사와의 협력을 통해 안정적으로 공급합니다."
+                        data-en="Stable supply of latest AI computing resources, including high-performance GPU servers, through collaboration with global partners">
+                        AI 고성능 GPU 서버를 포함한 최신 AI 컴퓨팅 자원을 글로벌 파트너사와의 협력을 통해 안정적으로 공급합니다.</p>
                 </div>
 
                 <div class="feature-card">
                     <span class="feature-icon">🎯</span>
                     <h3 data-ko="맞춤형 솔루션" data-en="Customized Solutions">맞춤형 솔루션</h3>
-                    <p data-ko="고객의 프로젝트 환경에 최적화된 기술 검토, 공급 전략 수립, 프로젝트 실행을 종합적으로 지원합니다." data-en="Comprehensive support for technical review, supply strategy formulation, and project execution optimized for customer project environments">고객의 프로젝트 환경에 최적화된 기술 검토, 공급 전략 수립, 프로젝트 실행을 종합적으로 지원합니다.</p>
+                    <p data-ko="고객의 프로젝트 환경에 최적화된 기술 검토, 공급 전략 수립, 프로젝트 실행을 종합적으로 지원합니다."
+                        data-en="Comprehensive support for technical review, supply strategy formulation, and project execution optimized for customer project environments">
+                        고객의 프로젝트 환경에 최적화된 기술 검토, 공급 전략 수립, 프로젝트 실행을 종합적으로 지원합니다.</p>
                 </div>
             </div>
         </div>
@@ -755,7 +772,7 @@
 
     <button id="scrollToTop" class="scroll-to-top" aria-label="페이지 상단으로 이동">
         <svg viewBox="0 0 24 24" width="24" height="24">
-            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
         <span>TOP</span>
     </button>
@@ -766,30 +783,30 @@
         function switchLanguage(lang) {
             currentLang = lang;
             const elements = document.querySelectorAll('[data-ko][data-en]');
-            
+
             elements.forEach(element => {
                 const koText = element.getAttribute('data-ko');
                 const enText = element.getAttribute('data-en');
-                
+
                 if (lang === 'ko') {
                     element.innerHTML = koText;
                 } else {
                     element.innerHTML = enText;
                 }
             });
-            
+
             document.querySelectorAll('.language-option').forEach(option => {
                 option.classList.remove('active');
             });
-            
+
             if (lang === 'ko') {
                 document.querySelectorAll('.language-option')[0].classList.add('active');
             } else {
                 document.querySelectorAll('.language-option')[1].classList.add('active');
             }
-            
+
             document.getElementById('languageDropdown').classList.remove('active');
-            
+
             // Update mobile language buttons
             document.querySelectorAll('.lang-option-btn').forEach(btn => btn.classList.remove('active'));
             if (lang === 'ko') {
@@ -797,7 +814,7 @@
             } else {
                 document.getElementById('mobileLangEn')?.classList.add('active');
             }
-            
+
             localStorage.setItem('preferredLanguage', lang);
         }
 
@@ -813,10 +830,10 @@
             dropdown.classList.toggle('active');
         }
 
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const languageSelector = document.querySelector('.language-selector');
             const dropdown = document.getElementById('languageDropdown');
-            
+
             if (!languageSelector.contains(event.target)) {
                 dropdown.classList.remove('active');
             }
@@ -833,22 +850,22 @@
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-        
+
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        
+
         function toggleMobileMenu() {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         }
-        
+
         hamburger.addEventListener('click', toggleMobileMenu);
         mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
-        
+
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 if (mobileMenu.classList.contains('active')) {
@@ -858,4 +875,5 @@
         });
     </script>
 </body>
+
 </html>

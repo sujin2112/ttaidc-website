@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +18,18 @@
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/theme.css">
     <script src="../js/theme.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'IBM Plex Sans', -apple-system, sans-serif;
             background: var(--primary);
@@ -29,6 +37,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
+
         nav {
             position: fixed;
             top: 0;
@@ -39,6 +48,7 @@
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
         }
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -47,6 +57,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
@@ -55,9 +66,23 @@
             letter-spacing: -0.02em;
             text-decoration: none;
         }
-        .logo span { color: var(--text); font-weight: 400; }
-        .logo .ai-small { font-size: 1.0rem !important; vertical-align: baseline; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+        .logo span {
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .logo .ai-small {
+            font-size: 1.0rem !important;
+            vertical-align: baseline;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
         .nav-links a {
             color: var(--text-dim);
             text-decoration: none;
@@ -66,7 +91,12 @@
             transition: color 0.3s ease;
             position: relative;
         }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -77,8 +107,16 @@
             background: var(--accent);
             transition: width 0.3s ease;
         }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-        .language-selector { position: relative; }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
         .language-btn {
             background: none;
             border: none;
@@ -88,7 +126,11 @@
             padding: 0.5rem;
             transition: transform 0.3s ease;
         }
-        .language-btn:hover { transform: scale(1.1); }
+
+        .language-btn:hover {
+            transform: scale(1.1);
+        }
+
         .language-dropdown {
             position: absolute;
             top: 100%;
@@ -105,11 +147,13 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
+
         .language-dropdown.active {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
+
         .language-option {
             padding: 0.7rem 1rem;
             cursor: pointer;
@@ -118,13 +162,23 @@
             color: var(--text);
             font-size: 0.95rem;
         }
-        .language-option:hover { background: rgba(0, 217, 255, 0.1); }
+
+        .language-option:hover {
+            background: rgba(0, 217, 255, 0.1);
+        }
+
         .language-option.active {
             background: rgba(0, 217, 255, 0.15);
             color: var(--accent);
             font-weight: 600;
         }
-        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
         /* Hamburger Menu */
         .hamburger {
             display: none;
@@ -139,6 +193,7 @@
             padding: 0.5rem;
             z-index: 1002;
         }
+
         .hamburger span {
             display: block;
             width: 24px;
@@ -148,9 +203,19 @@
             transition: all 0.3s ease;
             border-radius: 2px;
         }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
         /* Mobile Menu */
         .mobile-menu {
             display: none;
@@ -166,9 +231,21 @@
             transition: right 0.3s ease;
             border-left: 1px solid var(--border);
         }
-        .mobile-menu.active { right: 0; }
-        .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
-        .mobile-menu li { margin-bottom: 0.5rem; }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 0.5rem;
+        }
+
         .mobile-menu a {
             display: block;
             padding: 1rem;
@@ -179,7 +256,13 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        .mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); background: rgba(0, 217, 255, 0.1); }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: var(--accent);
+            background: rgba(0, 217, 255, 0.1);
+        }
+
         /* Mobile Language Section */
         .mobile-lang-section {
             margin-top: 2rem;
@@ -190,8 +273,16 @@
             justify-content: center;
             gap: 1rem;
         }
-        .mobile-lang-section .lang-icon { font-size: 1.5rem; }
-        .mobile-lang-section .lang-options { display: flex; gap: 0.5rem; }
+
+        .mobile-lang-section .lang-icon {
+            font-size: 1.5rem;
+        }
+
+        .mobile-lang-section .lang-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+
         .mobile-lang-section .lang-option-btn {
             padding: 0.5rem 1rem;
             border: 1px solid var(--border);
@@ -203,8 +294,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        .mobile-lang-section .lang-option-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .mobile-lang-section .lang-option-btn.active { background: var(--accent); border-color: var(--accent); color: var(--primary); }
+
+        .mobile-lang-section .lang-option-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .mobile-lang-section .lang-option-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--primary);
+        }
+
         .mobile-menu-overlay {
             display: none;
             position: fixed;
@@ -218,9 +319,23 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
-        .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .page-header { padding: 10rem 0 5rem; position: relative; }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .page-header {
+            padding: 10rem 0 5rem;
+            position: relative;
+        }
+
         .page-header::before {
             content: '';
             position: absolute;
@@ -231,6 +346,7 @@
             background: radial-gradient(ellipse at center, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
             opacity: 0.4;
         }
+
         .page-title {
             font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 700;
@@ -240,7 +356,11 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .content-section { padding: 0 0 8rem; }
+
+        .content-section {
+            padding: 0 0 8rem;
+        }
+
         .intro-text {
             background: var(--secondary);
             border: 1px solid var(--border);
@@ -250,6 +370,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .intro-text::before {
             content: '';
             position: absolute;
@@ -259,14 +380,23 @@
             height: 4px;
             background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
         }
+
         .intro-text p {
             font-size: clamp(1.1rem, 2vw, 1.35rem);
             color: var(--text-dim);
             line-height: 2;
             margin-bottom: 1.8rem;
         }
-        .intro-text p:last-child { margin-bottom: 0; }
-        .intro-text strong { color: var(--text); font-weight: 600; }
+
+        .intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro-text strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
         .highlight-section {
             background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 217, 255, 0.02) 100%);
             border: 1px solid rgba(0, 217, 255, 0.2);
@@ -275,19 +405,26 @@
             text-align: center;
             margin: 4rem 0;
         }
+
         .highlight-section p {
             font-size: clamp(1.3rem, 2.5vw, 1.8rem);
             color: var(--text);
             font-weight: 500;
             line-height: 1.7;
         }
-        .highlight-section strong { color: var(--accent); font-weight: 600; }
+
+        .highlight-section strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
         .key-values {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 4rem;
         }
+
         .value-card {
             background: var(--secondary);
             border: 1px solid var(--border);
@@ -297,6 +434,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .value-card::before {
             content: '';
             position: absolute;
@@ -308,47 +446,64 @@
             opacity: 0;
             transition: opacity 0.4s ease;
         }
+
         .value-card:hover {
             transform: translateY(-8px);
             border-color: var(--accent);
             box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
         }
-        .value-card:hover::before { opacity: 1; }
+
+        .value-card:hover::before {
+            opacity: 1;
+        }
+
         .value-icon {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
             display: block;
         }
+
         .value-card h3 {
             color: var(--accent);
             font-size: 1.3rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
+
         .value-card p {
             color: var(--text-dim);
             line-height: 1.7;
             font-size: 1.05rem;
         }
+
         footer {
             padding: 3rem 2rem;
             text-align: center;
             border-top: 1px solid var(--border);
             color: var(--text-dim);
         }
-        footer p { margin-bottom: 0.5rem; }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
         .footer-links {
             display: flex;
             gap: 2rem;
             justify-content: center;
             margin-top: 1rem;
         }
+
         .footer-links a {
             color: var(--text-dim);
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        .footer-links a:hover { color: var(--accent); }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
         .scroll-to-top {
             position: fixed;
             bottom: 2rem;
@@ -371,46 +526,114 @@
             z-index: 999;
             box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
         }
-        .scroll-to-top.visible { opacity: 1; visibility: visible; }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
         .scroll-to-top:hover {
             background: var(--accent);
             color: #0A0E27;
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 217, 255, 0.5);
         }
-        .scroll-to-top svg { width: 28px; height: 28px; }
+
+        .scroll-to-top svg {
+            width: 28px;
+            height: 28px;
+        }
+
         .scroll-to-top span {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             font-weight: 600;
         }
+
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .mobile-menu, .mobile-menu-overlay { display: block; }
-            .language-selector { display: none; }
-            .page-header { padding: 8rem 2rem 4rem; }
-            .intro-text { padding: 2.5rem 2rem; }
-            .highlight-section { padding: 2.5rem 2rem; }
-            .key-values { grid-template-columns: 1fr; }
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu,
+            .mobile-menu-overlay {
+                display: block;
+            }
+
+            .language-selector {
+                display: none;
+            }
+
+            .page-header {
+                padding: 8rem 2rem 4rem;
+            }
+
+            .intro-text {
+                padding: 2.5rem 2rem;
+            }
+
+            .highlight-section {
+                padding: 2.5rem 2rem;
+            }
+
+            .key-values {
+                grid-template-columns: 1fr;
+            }
+
             .scroll-to-top {
                 width: 60px;
                 height: 60px;
                 bottom: 1.5rem;
                 right: 1.5rem;
             }
-            .scroll-to-top svg { width: 20px; height: 20px; }
-            .scroll-to-top span { font-size: 0.75rem; }
-            footer { padding-bottom: 5rem; }
-            .footer-links { flex-wrap: wrap; gap: 1rem; }
+
+            .scroll-to-top svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .scroll-to-top span {
+                font-size: 0.75rem;
+            }
+
+            footer {
+                padding-bottom: 5rem;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
         }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--primary); }
-        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
     </style>
 </head>
+
 <body>
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
@@ -419,7 +642,7 @@
             <div class="loader-spinner"></div>
         </div>
     </div>
-    
+
     <nav>
         <div class="nav-container">
             <a href="../" class="logo">TT<span class="ai-small">ai</span></a>
@@ -450,7 +673,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-theme-top">
@@ -484,34 +707,50 @@
     <section class="content-section">
         <div class="container">
             <div class="intro-text">
-                <p data-ko="<strong>주식회사 TT</strong>는 NVIDIA GPU 기반 AI 데이터센터(AIDC) 및 고성능 컴퓨팅 인프라를 전문으로 하는 한국 법인 기업입니다." data-en="<strong>TT Co., Ltd.</strong> is a Korean corporate entity specializing in NVIDIA GPU-based AI Data Centers (AIDC) and high-performance computing infrastructure."><strong>주식회사 TT</strong>는 NVIDIA GPU 기반 AI 데이터센터(AIDC) 및 고성능 컴퓨팅 인프라를 전문으로 하는 한국 법인 기업입니다.</p>
-                
-                <p data-ko="TT는 <strong>NVIDIA HGX 기반 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다." data-en="TT supports the planning and execution of high-performance AI infrastructure projects including <strong>NVIDIA HGX-based GPU servers</strong> and related system architectures, with business operations centered in Korea and Vietnam.">TT는 <strong>NVIDIA HGX 기반 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다.</p>
-                
-                <p data-ko="TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다." data-en="TT collaborates with global technology partners and key local stakeholders within clear authority boundaries and compliance frameworks, aiming for <strong>stable and transparent project execution</strong>.">TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다.</p>
+                <p data-ko="<strong>주식회사 TT</strong>는 고성능 GPU 기반 AI 데이터센터(AIDC) 및 HPC 컴퓨팅 인프라를 전문으로 하는 한국 기업입니다."
+                    data-en="<strong>TT Co., Ltd.</strong> is a Korean company specializing in high-performance GPU-based AI Data Centers (AIDC) and HPC computing infrastructure.">
+                    <strong>주식회사 TT</strong>는 고성능 GPU 기반 AI 데이터센터(AIDC) 및 HPC 컴퓨팅 인프라를 전문으로 하는 한국 기업입니다.</p>
+
+                <p data-ko="TT는 <strong>하이퍼 스케일 데이터센터용 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다."
+                    data-en="TT supports the planning and execution of high-performance AI infrastructure projects including <strong>GPU servers for hyperscale data centers</strong> and related system architectures, with business operations centered in Korea and Vietnam.">
+                    TT는 <strong>하이퍼 스케일 데이터센터용 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과
+                    베트남을 중심으로 사업을 전개하고 있습니다.</p>
+
+                <p data-ko="TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다."
+                    data-en="TT collaborates with global technology partners and key local stakeholders within clear authority boundaries and compliance frameworks, aiming for <strong>stable and transparent project execution</strong>.">
+                    TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을
+                    지향합니다.</p>
             </div>
 
             <div class="highlight-section">
-                <p data-ko="TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다" data-en="TT supports the successful completion of AI infrastructure projects<br>based on <strong>technical expertise</strong> and <strong>business execution capabilities</strong>">TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다</p>
+                <p data-ko="TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다"
+                    data-en="TT supports the successful completion of AI infrastructure projects<br>based on <strong>technical expertise</strong> and <strong>business execution capabilities</strong>">
+                    TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다</p>
             </div>
 
             <div class="key-values">
                 <div class="value-card">
                     <span class="value-icon">🎯</span>
                     <h3 data-ko="전문성" data-en="Expertise">전문성</h3>
-                    <p data-ko="NVIDIA HGX 기반 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험" data-en="Deep technical understanding and practical experience in NVIDIA HGX-based GPU servers and AI data center infrastructure">NVIDIA HGX 기반 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험</p>
+                    <p data-ko="고성능 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험"
+                        data-en="Deep technical understanding and practical experience in high-performance GPU servers and AI data center infrastructure">
+                        고성능 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험</p>
                 </div>
 
                 <div class="value-card">
                     <span class="value-icon">🤝</span>
                     <h3 data-ko="파트너십" data-en="Partnership">파트너십</h3>
-                    <p data-ko="글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축" data-en="Building close collaborative relationships with global technology partners and key local stakeholders">글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축</p>
+                    <p data-ko="글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축"
+                        data-en="Building close collaborative relationships with global technology partners and key local stakeholders">
+                        글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축</p>
                 </div>
 
                 <div class="value-card">
                     <span class="value-icon">📋</span>
                     <h3 data-ko="투명성" data-en="Transparency">투명성</h3>
-                    <p data-ko="명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영" data-en="Stable and transparent project operations within clear authority boundaries and compliance frameworks">명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영</p>
+                    <p data-ko="명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영"
+                        data-en="Stable and transparent project operations within clear authority boundaries and compliance frameworks">
+                        명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영</p>
                 </div>
             </div>
         </div>
@@ -532,7 +771,7 @@
 
     <button id="scrollToTop" class="scroll-to-top" aria-label="페이지 상단으로 이동">
         <svg viewBox="0 0 24 24" width="24" height="24">
-            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
         </svg>
         <span>TOP</span>
     </button>
@@ -565,7 +804,7 @@
         function toggleLanguageDropdown() {
             document.getElementById('languageDropdown').classList.toggle('active');
         }
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             const languageSelector = document.querySelector('.language-selector');
             const dropdown = document.getElementById('languageDropdown');
             if (!languageSelector.contains(event.target)) {
@@ -602,4 +841,5 @@
         });
     </script>
 </body>
+
 </html>
