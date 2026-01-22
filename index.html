@@ -3,25 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="주식회사 TT 회사 소개. AI 데이터센터 전문 한국 법인입니다.">
-    <meta name="keywords" content="TT 회사, Trust Technology, AI 인프라 기업, GPU 서버 전문">
+    <meta name="description" content="TT(Trust Technology)는 NVIDIA HGX 기반 AI 데이터센터 인프라를 제공합니다. 한국과 베트남을 중심으로 GPU 서버 조달부터 구축, 운영까지 지원합니다.">
+    <meta name="keywords" content="AI 데이터센터, NVIDIA HGX, GPU 서버, AI 인프라, 데이터센터 구축, Trust Technology, TT, 베트남 AI">
+    <meta name="author" content="Trust Technology">
     <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.ttaidc.com/company/">
-    <meta property="og:title" content="Company - Trust Technology">
-    <meta property="og:description" content="주식회사 TT. AI 데이터센터 전문 기업.">
-    <title>Company - Trust Technology</title>
-    <link rel="canonical" href="https://www.ttaidc.com/company/">
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    <link rel="manifest" href="../manifest.json">
+    <meta property="og:url" content="https://www.ttaidc.com/">
+    <meta property="og:title" content="Trust Technology - AI Data Center Infrastructure">
+    <meta property="og:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
+    <meta property="og:image" content="https://www.ttaidc.com/og-image.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trust Technology - AI Data Center Infrastructure">
+    <meta name="twitter:description" content="NVIDIA HGX 기반 AI 데이터센터 인프라. GPU 조달부터 구축·운영까지.">
+    
+    <title>Trust Technology - AI Data Center Infrastructure</title>
+    <link rel="canonical" href="https://www.ttaidc.com/">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="manifest" href="./manifest.json">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Trust Technology",
+      "url": "https://www.ttaidc.com",
+      "logo": "https://www.ttaidc.com/favicon.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+82-31-713-8893",
+        "contactType": "sales",
+        "email": "info@ttaidc.com"
+      },
+      "sameAs": [
+        "https://www.ttaidc.com"
+      ]
+    }
+    </script>
     <meta name="theme-color" content="#00D9FF">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="css/theme.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/theme.css">
-    <script src="../js/theme.js"></script>
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="js/theme.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #1E2444;
+            --secondary: #2A3358;
+            --accent: #00D9FF;
+            --text: #FFFFFF;
+            --text-dim: #C8CDE0;
+            --border: #4A5280;
+        }
+        
+        /* Light Mode (warm cream/beige) */
+        [data-theme="light"] {
+            --primary: #F0EDE8;
+            --secondary: #FAFAF8;
+            --accent: #0077AA;
+            --text: #2A3358;
+            --text-dim: #5A6080;
+            --border: #C8C4BC;
+        }
+        
+        [data-theme="light"] .page-loader {
+            background: var(--primary);
+        }
+        
+        [data-theme="light"] nav {
+            background: rgba(240, 237, 232, 0.95);
+        }
+        
+        [data-theme="light"] .scroll-to-top {
+            background: #FFFFFF;
+            border-color: var(--accent);
+        }
+        
+        [data-theme="light"] .scroll-to-top:hover {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'IBM Plex Sans', -apple-system, sans-serif;
             background: var(--primary);
@@ -29,16 +101,18 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
+        
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 14, 39, 0.95);
+            background: rgba(10, 14, 39, 0.9);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
         }
+        
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -47,6 +121,7 @@
             justify-content: space-between;
             align-items: center;
         }
+        
         .logo {
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
@@ -55,30 +130,259 @@
             letter-spacing: -0.02em;
             text-decoration: none;
         }
-        .logo span { color: var(--text); font-weight: 400; }
-        .logo .ai-small { font-size: 1.0rem !important; vertical-align: baseline; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        
+        .logo span {
+            color: var(--text);
+            font-weight: 400;
+        }
+        
+        .logo .ai-small {
+            font-size: 1.0rem !important;
+            vertical-align: baseline;
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1002;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: rgba(10, 14, 39, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 1001;
+            padding: 6rem 2rem 2rem;
+            transition: right 0.3s ease;
+            border-left: 1px solid var(--border);
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: var(--accent);
+            background: rgba(0, 217, 255, 0.1);
+        }
+        
+        /* Mobile Language Section */
+        .mobile-lang-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .mobile-lang-section .lang-icon {
+            font-size: 1.5rem;
+        }
+        
+        .mobile-lang-section .lang-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .mobile-lang-section .lang-option-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-lang-section .lang-option-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .mobile-lang-section .lang-option-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--primary);
+        }
+        
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
         .nav-links a {
             color: var(--text-dim);
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
         }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-        .nav-links a::after {
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Modern Theme Toggle Switch */
+        .theme-toggle {
+            position: relative;
+            width: 52px;
+            height: 28px;
+            background: var(--border);
+            border-radius: 14px;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-right: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: var(--accent);
+        }
+        
+        .theme-toggle::before {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
+            top: 3px;
+            left: 3px;
+            width: 22px;
+            height: 22px;
+            background: var(--text);
+            border-radius: 50%;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-        .language-selector { position: relative; }
+        
+        [data-theme="light"] .theme-toggle::before {
+            transform: translateX(24px);
+            background: var(--primary);
+        }
+        
+        .theme-toggle .theme-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            transition: opacity 0.3s ease;
+        }
+        
+        .theme-toggle .icon-moon {
+            right: 6px;
+            opacity: 1;
+        }
+        
+        .theme-toggle .icon-sun {
+            left: 6px;
+            opacity: 0.4;
+        }
+        
+        [data-theme="light"] .theme-toggle .icon-moon {
+            opacity: 0.4;
+        }
+        
+        [data-theme="light"] .theme-toggle .icon-sun {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .theme-toggle {
+                display: flex;
+            }
+        }
+        
+        .language-selector {
+            position: relative;
+        }
+        
         .language-btn {
             background: none;
             border: none;
@@ -88,7 +392,11 @@
             padding: 0.5rem;
             transition: transform 0.3s ease;
         }
-        .language-btn:hover { transform: scale(1.1); }
+        
+        .language-btn:hover {
+            transform: scale(1.1);
+        }
+        
         .language-dropdown {
             position: absolute;
             top: 100%;
@@ -105,11 +413,13 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
+        
         .language-dropdown.active {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
+        
         .language-option {
             padding: 0.7rem 1rem;
             cursor: pointer;
@@ -118,237 +428,271 @@
             color: var(--text);
             font-size: 0.95rem;
         }
-        .language-option:hover { background: rgba(0, 217, 255, 0.1); }
+        
+        .language-option:hover {
+            background: rgba(0, 217, 255, 0.1);
+        }
+        
         .language-option.active {
             background: rgba(0, 217, 255, 0.15);
             color: var(--accent);
             font-weight: 600;
         }
-        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 44px;
-            height: 44px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            z-index: 1002;
-        }
-        .hamburger span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--text);
-            margin: 3px 0;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-        /* Mobile Menu */
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: rgba(10, 14, 39, 0.98);
-            backdrop-filter: blur(20px);
-            z-index: 1001;
-            padding: 6rem 2rem 2rem;
-            transition: right 0.3s ease;
-            border-left: 1px solid var(--border);
-        }
-        .mobile-menu.active { right: 0; }
-        .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
-        .mobile-menu li { margin-bottom: 0.5rem; }
-        .mobile-menu a {
-            display: block;
-            padding: 1rem;
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); background: rgba(0, 217, 255, 0.1); }
-        /* Mobile Language Section */
-        .mobile-lang-section {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-        }
-        .mobile-lang-section .lang-icon { font-size: 1.5rem; }
-        .mobile-lang-section .lang-options { display: flex; gap: 0.5rem; }
-        .mobile-lang-section .lang-option-btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border);
-            background: transparent;
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            font-weight: 500;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .mobile-lang-section .lang-option-btn:hover { border-color: var(--accent); color: var(--accent); }
-        .mobile-lang-section .lang-option-btn.active { background: var(--accent); border-color: var(--accent); color: var(--primary); }
-        .mobile-menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        
+        .hero-slider {
+            position: relative;
             width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
+            height: 100vh;
+            overflow: hidden;
         }
-        .mobile-menu-overlay.active { opacity: 1; pointer-events: auto; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .page-header { padding: 10rem 0 5rem; position: relative; }
-        .page-header::before {
-            content: '';
+        
+        .slide {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 400px;
-            background: radial-gradient(ellipse at center, rgba(0, 217, 255, 0.15) 0%, transparent 70%);
-            opacity: 0.4;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
-        .page-title {
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 700;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #FFFFFF 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        
+        .slide.active {
+            opacity: 1;
         }
-        .content-section { padding: 0 0 8rem; }
-        .intro-text {
-            background: var(--secondary);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 4rem;
-            margin-bottom: 4rem;
-            position: relative;
-            overflow: hidden;
+        
+        .slide-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: zoomIn 10s ease-out forwards;
         }
-        .intro-text::before {
-            content: '';
+        
+        @keyframes zoomIn {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+        
+        .slide.active .slide-bg {
+            animation: zoomIn 10s ease-out forwards;
+        }
+        
+        .slide-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+            bottom: 0;
+            background: linear-gradient(to right, rgba(10, 14, 39, 0.8) 0%, rgba(10, 14, 39, 0.4) 100%);
         }
-        .intro-text p {
-            font-size: clamp(1.1rem, 2vw, 1.35rem);
-            color: var(--text-dim);
-            line-height: 2;
-            margin-bottom: 1.8rem;
+        
+        .slide-content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+            z-index: 2;
         }
-        .intro-text p:last-child { margin-bottom: 0; }
-        .intro-text strong { color: var(--text); font-weight: 600; }
-        .highlight-section {
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(0, 217, 255, 0.02) 100%);
-            border: 1px solid rgba(0, 217, 255, 0.2);
-            border-radius: 24px;
-            padding: 3.5rem;
-            text-align: center;
-            margin: 4rem 0;
+        
+        .slide-title {
+            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: slideInUp 0.8s ease-out 0.3s both;
         }
-        .highlight-section p {
-            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-            color: var(--text);
-            font-weight: 500;
+        
+        .slide-description {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 650px;
             line-height: 1.7;
+            animation: slideInUp 0.8s ease-out 0.5s both;
         }
-        .highlight-section strong { color: var(--accent); font-weight: 600; }
-        .key-values {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slider-controls {
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 2rem;
-            margin-top: 4rem;
         }
-        .value-card {
-            background: var(--secondary);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.4s ease;
+        
+        .slider-arrow {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .slider-arrow:hover {
+            background: rgba(0, 217, 255, 0.2);
+            border-color: var(--accent);
+            transform: scale(1.1);
+        }
+        
+        .slider-arrow svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+        }
+        
+        .slider-dots {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.35);
+            cursor: pointer;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-        .value-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(0, 217, 255, 0.05) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
+        
+        .dot.active {
+            background: white;
+            width: 35px;
+            border-radius: 5px;
         }
-        .value-card:hover {
+        
+        .dot:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.6);
+        }
+        
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+        }
+        
+        .dot.active .progress-bar {
+            animation: progress 5s linear forwards;
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 8rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--text);
+        }
+        
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .business-card {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+        }
+        
+        .business-card:hover {
             transform: translateY(-8px);
             border-color: var(--accent);
             box-shadow: 0 20px 60px rgba(0, 217, 255, 0.15);
         }
-        .value-card:hover::before { opacity: 1; }
-        .value-icon {
-            font-size: 2.5rem;
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
-            display: block;
         }
-        .value-card h3 {
-            color: var(--accent);
-            font-size: 1.3rem;
+        
+        .business-card h3 {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            font-weight: 600;
+            color: var(--text);
         }
-        .value-card p {
+        
+        .business-card p {
             color: var(--text-dim);
             line-height: 1.7;
-            font-size: 1.05rem;
         }
+        
         footer {
             padding: 3rem 2rem;
             text-align: center;
             border-top: 1px solid var(--border);
             color: var(--text-dim);
         }
-        footer p { margin-bottom: 0.5rem; }
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-        .footer-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .footer-links a:hover { color: var(--accent); }
+        
         .scroll-to-top {
             position: fixed;
             bottom: 2rem;
@@ -371,44 +715,162 @@
             z-index: 999;
             box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
         }
-        .scroll-to-top.visible { opacity: 1; visibility: visible; }
+        
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
         .scroll-to-top:hover {
             background: var(--accent);
             color: #0A0E27;
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 217, 255, 0.5);
         }
-        .scroll-to-top svg { width: 28px; height: 28px; }
+        
+        .scroll-to-top svg {
+            width: 28px;
+            height: 28px;
+        }
+        
         .scroll-to-top span {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.9rem;
             font-weight: 600;
         }
+        
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .mobile-menu, .mobile-menu-overlay { display: block; }
-            .language-selector { display: none; }
-            .page-header { padding: 8rem 2rem 4rem; }
-            .intro-text { padding: 2.5rem 2rem; }
-            .highlight-section { padding: 2.5rem 2rem; }
-            .key-values { grid-template-columns: 1fr; }
+            .nav-links {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .mobile-menu,
+            .mobile-menu-overlay {
+                display: block;
+            }
+            
+            .language-selector {
+                display: none;
+            }
+            
+            .slide-content {
+                padding: 0 2rem;
+            }
+            
+            .slider-controls {
+                bottom: 2rem;
+                gap: 1rem;
+            }
+            
+            .slider-arrow {
+                width: 42px;
+                height: 42px;
+            }
+            
             .scroll-to-top {
                 width: 60px;
                 height: 60px;
                 bottom: 1.5rem;
                 right: 1.5rem;
             }
-            .scroll-to-top svg { width: 20px; height: 20px; }
-            .scroll-to-top span { font-size: 0.75rem; }
-            footer { padding-bottom: 5rem; }
-            .footer-links { flex-wrap: wrap; gap: 1rem; }
+            
+            .scroll-to-top svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .scroll-to-top span {
+                font-size: 0.75rem;
+            }
+            
+            footer {
+                padding-bottom: 5rem;
+            }
+            
+            .footer-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
         }
-        html { scroll-behavior: smooth; overflow-x: hidden; }
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--primary); }
-        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--primary);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+        
+        /* Page Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loader-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .loader-logo span {
+            color: var(--text);
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        
+        .loader-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -422,15 +884,16 @@
     
     <nav>
         <div class="nav-container">
-            <a href="../" class="logo">TT<span class="ai-small">ai</span></a>
+            <a href="./" class="logo">TT<span class="ai-small">ai</span></a>
             <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="../about/">ABOUT US</a></li>
-                    <li><a href="../business/">BUSINESS</a></li>
-                    <li><a href="./" class="active">COMPANY</a></li>
-                    <li><a href="../partners/">PARTNERS</a></li>
-                    <li><a href="../contact/">CONTACT US</a></li>
+                    <li><a href="about/">ABOUT US</a></li>
+                    <li><a href="business/">BUSINESS</a></li>
+                    <li><a href="company/">COMPANY</a></li>
+                    <li><a href="partners/">PARTNERS</a></li>
+                    <li><a href="contact/">CONTACT US</a></li>
                 </ul>
+                
                 <div class="language-selector">
                     <button class="language-btn" onclick="toggleLanguageDropdown()">🌐</button>
                     <div class="language-dropdown" id="languageDropdown">
@@ -438,6 +901,7 @@
                         <div class="language-option" onclick="switchLanguage('en')">English</div>
                     </div>
                 </div>
+                
                 <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="테마 전환">
                     <span class="theme-icon icon-sun">☀</span>
                     <span class="theme-icon icon-moon">☾</span>
@@ -459,13 +923,15 @@
                 <span class="theme-icon icon-moon">☾</span>
             </button>
         </div>
+        
         <ul>
-            <li><a href="../about/">ABOUT US</a></li>
-            <li><a href="../business/">BUSINESS</a></li>
-            <li><a href="./" class="active">COMPANY</a></li>
-            <li><a href="../partners/">PARTNERS</a></li>
-            <li><a href="../contact/">CONTACT US</a></li>
+            <li><a href="about/">ABOUT US</a></li>
+            <li><a href="business/">BUSINESS</a></li>
+            <li><a href="company/">COMPANY</a></li>
+            <li><a href="partners/">PARTNERS</a></li>
+            <li><a href="contact/">CONTACT US</a></li>
         </ul>
+        
         <div class="mobile-lang-flow">
             <div class="lang-options">
                 <span class="lang-icon">🌐</span>
@@ -475,43 +941,81 @@
         </div>
     </div>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">COMPANY</h1>
+    <section class="hero-slider">
+        <div class="slide active">
+            <div class="slide-bg" style="background-image: url('images/Section1.webp');"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h1 class="slide-title">INFRASTRUCTURE</h1>
+                <p class="slide-description" data-ko="엔비디아(NVIDIA)의 AI 데이터센터 인프라를 통해<br>한국과 베트남을 연결" data-en="Connecting Korea and Vietnam<br>through NVIDIA AI Data Center Infrastructure">엔비디아(NVIDIA)의 AI 데이터센터 인프라를 통해<br>한국과 베트남을 연결</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('images/Section2.webp');"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h1 class="slide-title">DEPLOYMENT</h1>
+                <p class="slide-description" data-ko="GPU 조달부터 구축·운영까지<br>NVIDIA HGX-Class 아키텍처 기반의 실증된 AI 데이터센터 인프라" data-en="From GPU procurement to deployment and operations<br>Proven AI Data Center Infrastructure based on NVIDIA HGX-Class Architecture">GPU 조달부터 구축·운영까지<br>NVIDIA HGX-Class 아키텍처 기반의 실증된 AI 데이터센터 인프라</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-bg" style="background-image: url('images/Section3.webp');"></div>
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h1 class="slide-title">EXECUTABILITY</h1>
+                <p class="slide-description" data-ko="조달부터 운영까지<br>TT는 실제로 구축·운영이 가능한 인프라를 제공" data-en="From procurement to operations<br>TT provides infrastructure that can actually be deployed and operated">조달부터 운영까지<br>TT는 실제로 구축·운영이 가능한 인프라를 제공</p>
+            </div>
+        </div>
+
+        <div class="slider-controls">
+            <div class="slider-arrow prev" onclick="changeSlide(-1)">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </div>
+
+            <div class="slider-dots">
+                <div class="dot active" onclick="goToSlide(0)">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="dot" onclick="goToSlide(1)">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="dot" onclick="goToSlide(2)">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="slider-arrow next" onclick="changeSlide(1)">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+            </div>
         </div>
     </section>
 
-    <section class="content-section">
+    <section id="business">
         <div class="container">
-            <div class="intro-text">
-                <p data-ko="<strong>주식회사 TT</strong>는 고성능 GPU 기반 AI 데이터센터(AIDC) 및 HPC 컴퓨팅 인프라를 전문으로 하는 한국 기업입니다." data-en="<strong>TT Co., Ltd.</strong> is a Korean company specializing in high-performance GPU-based AI Data Centers (AIDC) and HPC computing infrastructure."><strong>주식회사 TT</strong>는 고성능 GPU 기반 AI 데이터센터(AIDC) 및 HPC 컴퓨팅 인프라를 전문으로 하는 한국 기업입니다.</p>
-                
-                <p data-ko="TT는 <strong>하이퍼 스케일 데이터센터용 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다." data-en="TT supports the planning and execution of high-performance AI infrastructure projects, including <strong>GPU servers for hyperscale data centers</strong> and related system architectures, with business operations centered in Korea and Vietnam.">TT는 <strong>하이퍼 스케일 데이터센터용 GPU 서버</strong>와 관련 시스템 아키텍처를 포함한 고성능 AI 인프라 프로젝트의 기획 및 실행을 지원하며, 한국과 베트남을 중심으로 사업을 전개하고 있습니다.</p>
-                
-                <p data-ko="TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다." data-en="TT collaborates with global technology partners and key local stakeholders within clear authority boundaries and compliance frameworks, aiming for <strong>stable and transparent project execution</strong>.">TT는 명확한 권한 범위와 컴플라이언스 체계 내에서 글로벌 기술 파트너 및 현지 주요 이해관계자들과 협력하여, <strong>안정적이고 투명한 프로젝트 수행</strong>을 지향합니다.</p>
+            <div class="section-header">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title" data-ko="핵심 사업 영역" data-en="Core Business Areas">핵심 사업 영역</h2>
             </div>
-
-            <div class="highlight-section">
-                <p data-ko="TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다" data-en="TT supports the successful completion of AI infrastructure projects<br>based on <strong>technical expertise</strong> and <strong>business execution capabilities</strong>">TT는 <strong>기술적 전문성</strong>과 <strong>사업 실행력</strong>을 바탕으로<br>AI 인프라 프로젝트의 성공적인 완수를 지원합니다</p>
-            </div>
-
-            <div class="key-values">
-                <div class="value-card">
-                    <span class="value-icon">🎯</span>
-                    <h3 data-ko="전문성" data-en="Expertise">전문성</h3>
-                    <p data-ko="고성능 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험" data-en="data-en="Deep technical understanding and practical experience in high-performance GPU servers and AI data center infrastructure">고성능 GPU 서버 및 AI 데이터센터 인프라에 대한 깊은 기술적 이해와 실무 경험</p>
+            
+            <div class="business-grid">
+                <div class="business-card">
+                    <div class="card-icon">🖥️</div>
+                    <h3>NVIDIA HGX Server</h3>
+                    <p data-ko="AI 모델 학습과 추론, 대규모 AI 데이터센터 확장을 위한 HGX-Class GPU 서버를 제공합니다." data-en="We provide HGX-Class GPU servers for AI model training and inference, and large-scale AI data center expansion.">AI 모델 학습과 추론, 대규모 AI 데이터센터 확장을 위한 HGX-Class GPU 서버를 제공합니다.</p>
                 </div>
-
-                <div class="value-card">
-                    <span class="value-icon">🤝</span>
-                    <h3 data-ko="파트너십" data-en="Partnership">파트너십</h3>
-                    <p data-ko="글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축" data-en="Building close collaborative relationships with global technology partners and key local stakeholders">글로벌 기술 파트너 및 현지 주요 이해관계자들과의 긴밀한 협력 관계 구축</p>
+                
+                <div class="business-card">
+                    <div class="card-icon">🏢</div>
+                    <h3>AI Data Center (AIDC)</h3>
+                    <p data-ko="TT는 인프라 설계, 구축, 운영 준비까지 포함해 실제 현장에서 실행 가능한 AI 데이터센터를 구축합니다." data-en="TT builds AI data centers that are executable in real-world environments, including infrastructure design, construction, and operational readiness.">TT는 인프라 설계, 구축, 운영 준비까지 포함해 실제 현장에서 실행 가능한 AI 데이터센터를 구축합니다.</p>
                 </div>
-
-                <div class="value-card">
-                    <span class="value-icon">📋</span>
-                    <h3 data-ko="투명성" data-en="Transparency">투명성</h3>
-                    <p data-ko="명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영" data-en="Stable and transparent project operations within clear authority boundaries and compliance frameworks">명확한 권한 범위와 컴플라이언스 체계 내에서 안정적이고 투명한 프로젝트 운영</p>
+                
+                <div class="business-card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Deployment & Operations</h3>
+                    <p data-ko="TT는 AI 데이터센터 인프라의 구축과 운영을 관리하여, 안정적인 성능, 운영의 연속성, 그리고 장기적인 신뢰성을 보장합니다." data-en="TT manages the deployment and operations of AI data center infrastructure, ensuring stable performance, operational continuity, and long-term reliability.">TT는 AI 데이터센터 인프라의 구축과 운영을 관리하여, 안정적인 성능, 운영의 연속성, 그리고 장기적인 신뢰성을 보장합니다.</p>
                 </div>
             </div>
         </div>
@@ -520,13 +1024,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2026 Trust & Technology. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="../about/">About</a>
-                <a href="../business/">Business</a>
-                <a href="./">Company</a>
-                <a href="../partners/">Partners</a>
-                <a href="../contact/">Contact</a>
-            </div>
         </div>
     </footer>
 
@@ -537,41 +1034,140 @@
         <span>TOP</span>
     </button>
 
-    <script>
-        let currentLang = 'ko';
-        function switchLanguage(lang) {
-            currentLang = lang;
-            const elements = document.querySelectorAll('[data-ko][data-en]');
-            elements.forEach(element => {
-                const text = element.getAttribute('data-' + lang);
-                element.innerHTML = text;
-            });
-            document.querySelectorAll('.language-option').forEach(option => option.classList.remove('active'));
-            if (lang === 'ko') {
-                document.querySelectorAll('.language-option')[0].classList.add('active');
-            } else {
-                document.querySelectorAll('.language-option')[1].classList.add('active');
-            }
-            document.getElementById('languageDropdown').classList.remove('active');
-            document.querySelectorAll('.lang-option-btn').forEach(btn => btn.classList.remove('active'));
-            if (lang === 'ko') document.getElementById('mobileLangKo')?.classList.add('active');
-            else document.getElementById('mobileLangEn')?.classList.add('active');
-            localStorage.setItem('preferredLanguage', lang);
+    
+<script>
+let currentLang = 'ko';
+
+function switchLanguage(lang) {
+    currentLang = lang;
+    const elements = document.querySelectorAll('[data-ko][data-en]');
+    
+    elements.forEach(element => {
+        const koText = element.getAttribute('data-ko');
+        const enText = element.getAttribute('data-en');
+        
+        if (lang === 'ko') {
+            element.innerHTML = koText;
+        } else {
+            element.innerHTML = enText;
         }
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferredLanguage');
-            if (savedLang) switchLanguage(savedLang);
-        });
+    });
+    
+    // Update desktop language options
+    document.querySelectorAll('.language-option').forEach(option => {
+        option.classList.remove('active');
+    });
+    
+    if (lang === 'ko') {
+        document.querySelectorAll('.language-option')[0].classList.add('active');
+    } else {
+        document.querySelectorAll('.language-option')[1].classList.add('active');
+    }
+    
+    document.getElementById('languageDropdown').classList.remove('active');
+    
+    // Update mobile language buttons
+    document.querySelectorAll('.lang-option-btn').forEach(btn => btn.classList.remove('active'));
+    if (lang === 'ko') {
+        document.getElementById('mobileLangKo')?.classList.add('active');
+    } else {
+        document.getElementById('mobileLangEn')?.classList.add('active');
+    }
+    
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        switchLanguage(savedLang);
+    }
+});
+</script>
+
+<script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('preferredTheme', newTheme);
+        }
+        
+        // Load saved theme
+        (function() {
+            const savedTheme = localStorage.getItem('preferredTheme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        })();
+        
         function toggleLanguageDropdown() {
-            document.getElementById('languageDropdown').classList.toggle('active');
-        }
-        document.addEventListener('click', function(event) {
-            const languageSelector = document.querySelector('.language-selector');
             const dropdown = document.getElementById('languageDropdown');
-            if (!languageSelector.contains(event.target)) {
-                dropdown.classList.remove('active');
+            dropdown.classList.toggle('active');
+        }
+        
+        document.addEventListener('click', function(event) {
+            const selector = document.querySelector('.language-selector');
+            if (!selector.contains(event.target)) {
+                document.getElementById('languageDropdown').classList.remove('active');
             }
         });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let autoplayInterval;
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+
+            resetAutoplay();
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            autoplayInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        }
+
+        resetAutoplay();
+
+        document.querySelector('.hero-slider').addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+
+        document.querySelector('.hero-slider').addEventListener('mouseleave', () => {
+            resetAutoplay();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+            else if (e.key === 'ArrowRight') changeSlide(1);
+        });
+
         const scrollToTopBtn = document.getElementById('scrollToTop');
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
@@ -583,22 +1179,39 @@
         scrollToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        
         function toggleMobileMenu() {
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
             mobileMenuOverlay.classList.toggle('active');
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         }
+        
         hamburger.addEventListener('click', toggleMobileMenu);
         mobileMenuOverlay.addEventListener('click', toggleMobileMenu);
+        
+        // Close mobile menu when clicking a link
         document.querySelectorAll('.mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                if (mobileMenu.classList.contains('active')) toggleMobileMenu();
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
             });
+        });
+        
+        // Hide page loader when page is loaded
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pageLoader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                }, 300);
+            }
         });
     </script>
 </body>
